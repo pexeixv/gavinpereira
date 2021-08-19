@@ -1,0 +1,66 @@
+.footer_outer
+    background: var(--background)
+
+.footer
+    padding: 1em 0
+    // max-height: 70px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.footer > *
+    width: 100%
+
+.footer_logo_icon
+    height: 30px
+
+.footer_logo
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    gap: 0.5em
+
+.footer_logo_text
+    font-weight: 700
+    color: var(--text-muted)
+
+.footer_joke
+    justify-self: center
+    text-transform: uppercase
+    color: var(--text-muted)
+    font-weight: 700
+    font-size: 0.85rem
+    text-align: center
+    line-height: 1.4
+
+.striked
+    position: relative
+.striked::after
+    content: ''
+    width: 110%
+    height: 2px
+    background: var(--text)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+.footer_socials
+    justify-content: flex-end
+    display: flex
+    flex-direction: row
+    gap: 0.5em
+    align-items: center
+
+.footer_social div
+    display: grid
+    place-items: center
+    width: 30px
+    height: 30px
+    border-radius: 100px
+    background: var(--subheading)
+
+.footer_social i
+    text-align: center
+    color: var(--background)
