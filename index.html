@@ -23,24 +23,26 @@
                 <span class="header_logo_text">Gavin Pereira</span>
             </div>
 
-            <nav class="nav header_nav">
+            <nav class="nav header_nav ">
                 <a href="#" class="nav_link nav_link-active">Home</a>
                 <a href="#" class="nav_link">About</a>
                 <a href="#" class="nav_link">Portfolio</a>
                 <a href="#" class="nav_link">Contact</a>
             </nav>
-            <div class="header_darkmode">
-                <input type="checkbox" class="darkmode_checkbox" id="darkmode_toggle">
-                <label class="darkmode_label" for="darkmode_toggle">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                    <div class="ball"></div>
-                </label>
-            </div>
-            <div class="header_burger">
-                <span class="burger_bar"></span>
-                <span class="burger_bar"></span>
-                <span class="burger_bar"></span>
+            <div class="header_buttons">
+                <div class="header_darkmode">
+                    <input type="checkbox" class="darkmode_checkbox" id="darkmode_toggle">
+                    <label class="darkmode_label" for="darkmode_toggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+                <div class="header_burger">
+                    <span class="burger_bar burger_bar1"></span>
+                    <span class="burger_bar burger_bar2"></span>
+                    <span class="burger_bar burger_bar3"></span>
+                </div>
             </div>
         </header>
     </div>
@@ -240,6 +242,15 @@
             document.body.classList.remove('darkmode')
             toggle.checked = false
         }
+
+
+        const burger = document.querySelector('.header_burger ')
+        const nav = document.querySelector('.header_nav')
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('header_burger-clicked')
+            nav.classList.toggle('header_nav-expanded')
+        })
 
     </script>
 
