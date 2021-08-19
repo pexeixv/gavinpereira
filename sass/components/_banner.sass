@@ -1,0 +1,46 @@
+.banner_outer
+    background: var(--background-secondary)
+    padding: 5em 0 5em
+
+.banner
+    background: var(--subheading)
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 2em 3em
+    gap: 1.5em
+
+.banner_title
+    color: var(--background)
+    font-size: 2rem
+
+.banner_desc
+    color: var(--background-secondary)
+    font-weight: 400
+
+.banner_btn
+    background: var(--background-secondary)
+    color: var(--subheading)
+    border-color: var(--background-secondary)
+    &:hover
+        background: var(--background-secondary)
+        color: var(--subheading)
+        border-color: var(--background-secondary)
+
+@media screen and ( max-width: 850px )
+    .banner
+        flex-direction: column
+        align-items: flex-start
+
+@media screen and ( max-width: 700px )
+    .banner_title
+        font-size: 1.7rem
+    .banner
+        padding: 2em 2em
+
+@media screen and ( max-width: 600px )
+    .banner_title
+        font-size: 1.5rem
+    .banner
+        padding: 2em 1.5em
