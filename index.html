@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gavin Pereira</title>
+    <link rel="shortcut icon" href="//gavinpereira.in/img/fav/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="sass/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <script src="js/svg-inject.js"></script>
+</head>
+
+<body>
+
+
+
+    <div class="header_outer outer">
+        <header class="header header_inner inner">
+            <div class="header_logo">
+                <img src="img/logo.svg" alt="Gavin Pereira logo" class="header_logo_icon">
+                <span class="header_logo_text">Gavin Pereira</span>
+            </div>
+
+            <nav class="nav header_nav">
+                <a href="#" class="nav_link nav_link-active">Home</a>
+                <a href="#" class="nav_link">About</a>
+                <a href="#" class="nav_link">Portfolio</a>
+                <a href="#" class="nav_link">Contact</a>
+            </nav>
+            <div class="header_darkmode">
+                <input type="checkbox" class="darkmode_checkbox" id="darkmode_toggle">
+                <label class="darkmode_label" for="darkmode_toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="header_burger">
+                <span class="burger_bar"></span>
+                <span class="burger_bar"></span>
+                <span class="burger_bar"></span>
+            </div>
+        </header>
+    </div>
+
+
+
+    <div class="main_outer outer">
+        <main class="main main_inner inner">
+            <div class="main_left">
+                <h1 class="main_title">
+                    Here’s my totally awesome heading!
+                </h1>
+                <p class="main_desc">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.
+                </p>
+                <div class="main_ctas">
+                    <a href="#" class="btn btn-pri">Get in touch</a>
+                    <a href="#" class="btn btn-sec">Résumé</a>
+                </div>
+            </div>
+            <div class="main_right">
+                <img src="img/GavinPereira.png" class="main_hero" alt="Gavin Pereira portrait">
+                <img src="img/shapes.svg" onload="SVGInject(this)" class="main_shapes">
+            </div>
+        </main>
+    </div>
+
+
+
+    <script>
+        const key = document.getElementById('darkmode_toggle')
+
+        key.addEventListener('change', () => {
+            if (document.body.classList.contains('darkmode')) {
+                document.body.classList.remove('darkmode')
+                window.localStorage.setItem('mode', 'lite')
+            } else {
+                document.body.classList.add('darkmode')
+                window.localStorage.setItem('mode', 'dark')
+            }
+        })
+
+        var mode = window.localStorage.getItem('mode')
+        if (mode == 'dark') {
+            document.body.classList.add('darkmode')
+            key.checked = true
+        }
+
+    </script>
+
+
+</body>
+
+</html>

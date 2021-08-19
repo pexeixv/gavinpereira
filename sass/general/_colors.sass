@@ -8,6 +8,7 @@ $light-grey: #B7B7B7
 $light-background-secondary: #E7FFFD
 $light-button: #15847B
 $light-button-hover: #0D544E
+$light-button-text: #FFFFFF
 
 $dark-background: #020B0D
 $dark-text: #EAEBEC
@@ -19,3 +20,30 @@ $dark-grey: #B7B7B7
 $dark-background-secondary: #0E1E25
 $dark-button: #00C7B6
 $dark-button-hover: #5CEBDF
+$dark-button-text: #083564
+
+body
+    --background: #{$light-background}
+    --text: #{$light-text}
+    --text-muted: #{$light-text-muted}
+    --primary: #{$light-primary}
+    --primary-muted: #{$light-primary-muted}
+    --subheading: #{$light-subheading}
+    --grey: #{$light-grey}
+    --background-secondary: #{$light-background-secondary}
+    --button: #{$light-button}
+    --button-hover: #{$light-button-hover}
+    --button-text: #{$light-button-text}
+
+.darkmode
+    --background: #{$dark-background}
+    --text: #{$dark-text}
+    --text-muted: #{$dark-text-muted}
+    --primary: #{$dark-primary}
+    --primary-muted: #{$dark-primary-muted}
+    --subheading: #{$dark-subheading}
+    --grey: #{$dark-grey}
+    --background-secondary: #{$dark-background-secondary}
+    --button: #{$dark-button}
+    --button-hover: #{$dark-button-hover}
+    --button-text: #{$dark-button-text}

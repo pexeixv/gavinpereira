@@ -1,0 +1,66 @@
+.header_outer
+    background: var(--background)
+
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 2em
+    height: 70px
+
+.burger_bar
+    background: black
+    height: 5px
+    width: 25px
+    margin: 1px
+
+.header_burger
+    cursor: pointer
+    display: flex
+    flex-direction: column
+
+.header_nav
+    flex: 1
+    text-align: right
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: 1.5em
+
+.nav_link
+    font-weight: 700
+    color: var(--primary-muted)
+    position: relative
+
+.nav_link-active
+    color: var(--primary)
+.nav_link-active::after
+    content: ''
+    background: var(--primary)
+    height: 6px
+    width: 6px
+    border-radius: 100px
+    position: absolute
+    top: 120%
+    left: 50%
+    transform: translateX(-50%)
+
+.header_logo
+    display: flex
+    align-items: center
+    gap: 0.5em
+
+.header_logo_icon
+    height: 50px
+
+.header_logo_text
+    font-weight: 700
+    font-size: 1.5rem
+.header_burger
+    display: none
+
+.header_logo_icon
+    transition: all 1000ms
+
+.darkmode .header_logo_icon
+    filter: invert(1)
