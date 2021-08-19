@@ -12,6 +12,7 @@
     display: flex
     flex-direction: column
     align-items: center
+    max-width: 1000px
 
 .test_quote
     padding: 2em 1.5em 1em
@@ -26,3 +27,16 @@
     color: var(--text-muted)
     font-weight: 400
     font-style: italic
+
+@media screen and ( max-width: 1000px )
+    .tests_grid
+        grid-template-columns: 1fr
+        grid-row-gap: 5em
+    .test
+        max-width: 500px
+    .test_quote
+        font-size: 0.85rem
+
+@media screen and ( max-width: 550px )
+    .tests_grid
+        grid-template-columns: 1fr
