@@ -12,7 +12,7 @@
     <script src="js/svg-inject.js"></script>
 </head>
 
-<body>
+<body class="darkmode">
 
 
 
@@ -54,7 +54,8 @@
                     Here’s my totally awesome heading!
                 </h1>
                 <p class="main_desc">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                    tincidunt ut
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.
                 </p>
                 <div class="main_ctas">
@@ -70,11 +71,130 @@
     </div>
 
 
+    <section class="recent_outer outer">
+        <div class="recent recent_inner inner">
+            <h2 class="recent_title section_title">
+                Check out my recent work
+            </h2>
+            <p class="recent_desc section_desc">
+                <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, a! -->
+            </p>
+            <div class="recent_grid">
+                <div class="post">
+                    <img src="img/post.png" class="post_image">
+                    <h4 class="post_title">Brand name</h4>
+                    <p class="post_desc">Web Dev</p>
+
+                </div>
+                <div class="post">
+                    <img src="img/post.png" class="post_image">
+                    <h4 class="post_title">Brand name</h4>
+                    <p class="post_desc">Web Dev</p>
+
+                </div>
+                <div class="post">
+                    <img src="img/post.png" class="post_image">
+                    <h4 class="post_title">Brand name</h4>
+                    <p class="post_desc">Web Dev</p>
+
+                </div>
+                <div class="post">
+                    <img src="img/post.png" class="post_image">
+                    <h4 class="post_title">Brand name</h4>
+                    <p class="post_desc">Web Dev</p>
+
+                </div>
+                <div class="post">
+                    <img src="img/post.png" class="post_image">
+                    <h4 class="post_title">Brand name</h4>
+                    <p class="post_desc">Web Dev</p>
+
+                </div>
+                <div class="post">
+                    <img src="img/post.png" class="post_image">
+                    <h4 class="post_title">Brand name</h4>
+                    <p class="post_desc">Web Dev</p>
+
+                </div>
+            </div>
+            <a href="#" class="recent_btn btn btn-primary">View more</a>
+        </div>
+    </section>
+
+
+    <section class="tests_outer outer">
+        <div class="test test_inner inner">
+            <h2 class="tests_title section_title">
+                Hear from my clients
+            </h2>
+            <p class="tests_desc section_desc">
+                <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse suscipit minima sequi exercitationem facere aspernatur. -->
+            </p>
+
+            <div class="tests_grid">
+                <div class="test">
+                    <img src="img/person.png" alt="" class="test_image">
+                    <q class="test_quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias
+                        consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore
+                        velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente
+                        reiciendis
+                        labore molestiae!</q>
+                    <h4 class="test_name">Person name</h4>
+                    <h5 class="test_desg">Designation</h5>
+                </div>
+                <div class="test">
+                    <img src="img/person.png" alt="" class="test_image">
+                    <q class="test_quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias
+                        consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore
+                        velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente
+                        reiciendis
+                        labore molestiae!</q>
+                    <h4 class="test_name">Person name</h4>
+                    <h5 class="test_desg">Designation</h5>
+                </div>
+                <div class="test">
+                    <img src="img/person.png" alt="" class="test_image">
+                    <q class="test_quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias
+                        consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore
+                        velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente
+                        reiciendis
+                        labore molestiae!</q>
+                    <h4 class="test_name">Person name</h4>
+                    <h5 class="test_desg">Designation</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="clients_outer outer">
+        <div class="clients clients_inner inner">
+            <h2 class="clients_title section_title">
+                I have worked with
+            </h2>
+            <div class="clients_grid">
+                <img class="clients_image" src="img/clients/adrpro.png">
+                <img class="clients_image" src="img/clients/zb.png">
+                <img class="clients_image" src="img/clients/4L.png">
+                <img class="clients_image" src="img/clients/adrstudio.png">
+                <img class="clients_image" src="img/clients/macmo.png">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="footer_outer outer">
+        <footer class="footer footer_inner inner">
+
+        </footer>
+    </section>
+
 
     <script>
-        const key = document.getElementById('darkmode_toggle')
+        const toggle = document.getElementById('darkmode_toggle')
 
-        key.addEventListener('change', () => {
+        toggle.addEventListener('change', () => {
             if (document.body.classList.contains('darkmode')) {
                 document.body.classList.remove('darkmode')
                 window.localStorage.setItem('mode', 'lite')
@@ -85,9 +205,9 @@
         })
 
         var mode = window.localStorage.getItem('mode')
-        if (mode == 'dark') {
-            document.body.classList.add('darkmode')
-            key.checked = true
+        if (mode == 'lite') {
+            document.body.classList.remove('darkmode')
+            toggle.checked = false
         }
 
     </script>
