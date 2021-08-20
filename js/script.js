@@ -54,6 +54,5 @@ window.addEventListener('scroll', () => {
         body.classList.remove('scroll-down')
         body.classList.add('scroll-up')
     }
-    console.log(currentScroll)
     lastScroll = currentScroll
 })

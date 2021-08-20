@@ -8,8 +8,74 @@ layout: 'base.njk'
 {% include 'header.njk' %}
 
 
-<div style="min-height: 70px; background: var(--background);"></div>
 
+    <section class="contact_outer outer">
+        <div class="contact contact_inner inner">
+            <h2 class="contact_title section_title">
+                Write to me
+            </h2>
+            <form action="" class="contact_form">
+
+                <div class="form_row">
+                    <div class="form_name">
+                        <input type="text" name="Name" id="form-name" class="form_name_input form_field"
+                            required="required" placeholder=" ">
+                        <span class="form_name_text form_placeholder">Name</span>
+                    </div>
+                    <div class="form_email">
+                        <input type="email" name="Email" id="form-email" class="form_email_input form_field "
+                            required="required" placeholder=" ">
+                        <span class="form_email_text form_placeholder">eMail Address</span>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="form_message">
+                        <textarea name="" id="form-message" cols="100" rows="10" class="form_message_input form_field"
+                            required="required" placeholder=" "></textarea>
+                        <span class="form_message_text form_placeholder">Message</span>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <input type="submit" value="Send" class="form_submit btn btn-pri">
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+    <section class="socials_outer outer">
+        <div class="socials socials_inner inner">
+            <div class="socials_row socials_row-big">
+                <a href="//wa.me/918888253992" class="btn-big">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="btn-big_text">Text me on WhatsApp</span>
+                </a>
+                <a href="mailto:hi@gavinpereira.in" class="btn-big">
+                    <i class="fas fa-at"></i>
+                    <span class="btn-big_text">Send me an eMail</span>
+                </a>
+            </div>
+            <div class="socials_row socials_row-round">
+                <a class="btn-round" href="//facebook.com/pexeixv">
+                        <div><i class="fab fa-facebook-f"></i></div>
+                </a>
+                <a class="btn-round" href="//instagr.am/pexeixv">
+                        <div><i class="fab fa-instagram"></i></div>
+                </a>
+                <a class="btn-round" href="//codepen.io/pexeixv">
+                        <div><i class="fab fa-codepen"></i></div>
+                </a>
+                <a class="btn-round" href="//github.com/pexeixv">
+                        <div><i class="fab fa-github"></i></div>
+                </a>
+                <a class="btn-round" href="//linked.com/in/gavinpereira.in">
+                        <div><i class="fab fa-linkedin"></i></div>
+                </a>
+            </div>
+            
+        </div>
+    </section>
 
 
 
