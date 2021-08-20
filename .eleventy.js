@@ -1,7 +1,10 @@
 module.exports = eleventyConfig => {
+    eleventyConfig.addPassthroughCopy('./sass/styles.css')
+    eleventyConfig.addPassthroughCopy('./img')
+    eleventyConfig.addPassthroughCopy('./js')
     return {
         dir: {
-            input: '.',
+            input: 'src',
             output: '_site'
         }
     }

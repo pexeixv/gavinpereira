@@ -1,6 +1,8 @@
 var toggle = document.getElementById('darkmode_toggle')
+var ball = document.querySelector('.darkmode_label .ball')
 
 toggle.addEventListener('change', () => {
+    ball.classList.add('ball-trans')
     if (document.body.classList.contains('darkmode')) {
         document.body.classList.remove('darkmode')
         window.localStorage.setItem('mode', 'lite')
@@ -8,6 +10,7 @@ toggle.addEventListener('change', () => {
         document.body.classList.add('darkmode')
         window.localStorage.setItem('mode', 'dark')
     }
+    ball.classList.remove('ball-trans')
 })
 
 var mode = window.localStorage.getItem('mode')
