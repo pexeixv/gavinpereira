@@ -3,6 +3,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy('./img')
     eleventyConfig.addPassthroughCopy('./js')
     eleventyConfig.addPassthroughCopy('./font')
+    eleventyConfig.addPassthroughCopy('./_data/posts.json')
     return {
         dir: {
             input: '.',

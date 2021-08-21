@@ -1,0 +1,16 @@
+[
+    {
+        "link": "//wa.me/918888253992",
+        "classes": [
+            "fab",
+            "fa-whatsapp"
+        ]
+    },
+    {
+        "link": "mailto:hi@gavinpereira.in",
+        "classes": [
+            "fas",
+            "fa-at"
+        ]
+    }
+]

@@ -57,21 +57,13 @@ layout: 'base.njk'
                 </a>
             </div>
             <div class="socials_row socials_row-round">
-                <a class="btn-round" href="//facebook.com/pexeixv">
-                        <div><i class="fab fa-facebook-f"></i></div>
+
+                {% for icon in contact_icons %}
+                    <a class="btn-round" href="{{icon.link}}" target="_blank">
+                        <div><i class="{{icon.classes[0]}} {{icon.classes[1]}}"></i></div>
                 </a>
-                <a class="btn-round" href="//instagr.am/pexeixv">
-                        <div><i class="fab fa-instagram"></i></div>
-                </a>
-                <a class="btn-round" href="//codepen.io/pexeixv">
-                        <div><i class="fab fa-codepen"></i></div>
-                </a>
-                <a class="btn-round" href="//github.com/pexeixv">
-                        <div><i class="fab fa-github"></i></div>
-                </a>
-                <a class="btn-round" href="//linked.com/in/gavinpereira.in">
-                        <div><i class="fab fa-linkedin"></i></div>
-                </a>
+                {% endfor %}
+
             </div>
             
         </div>

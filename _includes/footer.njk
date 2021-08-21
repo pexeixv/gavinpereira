@@ -12,11 +12,12 @@
                 a keyboard by Gavin Pereira
             </p>
             <div class="footer_socials">
-                <a class="btn-round" href="//wa.me/918888253992">
-                    <div><i class="fab fa-whatsapp"></i></div>
+                {% for icon in footer_icons %}
+                    <a class="btn-round" href="{{icon.link}}">
+                    <div><i class="{{icon.classes[0]}} {{icon.classes[1]}}"></i></div>
                 </a>
-                <a class="btn-round" href="mailto:hi@gavinpereira.in">
-                    <div><i class="fas fa-at"></i></div></a>
+                {% endfor %}
+
             </div>
 
             </img>

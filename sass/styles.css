@@ -159,6 +159,22 @@ h2.section_title {
   tap-highlight-color: transparent;
 }
 
+noscript div {
+  min-height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+noscript div a {
+  color: white;
+  text-decoration: underline;
+}
+
 .header_outer {
   background: var(--background);
   z-index: 9999;

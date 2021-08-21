@@ -1,0 +1,37 @@
+[
+    {
+        "link": "//facebook.com/pexeixv",
+        "classes": [
+            "fab",
+            "fa-facebook-f"
+        ]
+    },
+    {
+        "link": "//instagr.am/pexeixv",
+        "classes": [
+            "fab",
+            "fa-instagram"
+        ]
+    },
+    {
+        "link": "//codepen.io/pexeixv",
+        "classes": [
+            "fab",
+            "fa-codepen"
+        ]
+    },
+    {
+        "link": "//github.com/pexeixv",
+        "classes": [
+            "fab",
+            "fa-github"
+        ]
+    },
+    {
+        "link": "//linked.com/in/gavinpereira.in",
+        "classes": [
+            "fab",
+            "fa-linkedin"
+        ]
+    }
+]
