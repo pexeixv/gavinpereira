@@ -1,28 +1,3 @@
-var toggle = document.getElementById('darkmode_toggle')
-var ball = document.querySelector('.darkmode_label .ball')
-
-toggle.addEventListener('change', () => {
-    ball.classList.add('ball-trans')
-    if (document.body.classList.contains('darkmode')) {
-        document.body.classList.remove('darkmode')
-        window.localStorage.setItem('mode', 'lite')
-    } else {
-        document.body.classList.add('darkmode')
-        window.localStorage.setItem('mode', 'dark')
-    }
-    ball.classList.remove('ball-trans')
-})
-
-var mode = window.localStorage.getItem('mode')
-if (mode == 'dark') {
-    document.body.classList.add('darkmode')
-    toggle.checked = true
-} else {
-    document.body.classList.remove('darkmode')
-    toggle.checked = false
-}
-
-
 var burger = document.querySelector('.header_burger ')
 var nav = document.querySelector('.header_nav')
 
@@ -30,16 +5,8 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('header_burger-clicked')
     nav.classList.toggle('header_nav-expanded')
 })
-// document.querySelector('.darkmode_label .ball').classList.add('ball-trans')
-
-
-
-
-
-
 var body = document.body
 let lastScroll = 0
-
 window.addEventListener('scroll', () => {
     var currentScroll = window.pageYOffset
 
@@ -56,3 +23,40 @@ window.addEventListener('scroll', () => {
     }
     lastScroll = currentScroll
 })
+
+
+
+var mode = window.localStorage.getItem('mode')
+if (mode == 'dark') {
+    document.body.classList.add('darkmode')
+    // toggle.checked = true
+} else {
+    document.body.classList.remove('darkmode')
+    // toggle.checked = false
+}
+
+
+
+
+var themeToggle = document.querySelector('div.header_theme')
+var themeToggleIcon = document.querySelector('span.header_theme_icon')
+
+var liteMode = () => {
+    themeToggleIcon.innerText = 'brightness_2'
+    themeToggle.style.transform = 'rotateZ(+60deg)'
+    document.body.classList.remove('darkmode')
+    window.localStorage.setItem('mode', 'lite')
+}
+
+var darkMode = () => {
+    themeToggleIcon.innerText = 'wb_sunny'
+    themeToggle.style.transform = 'rotateZ(-60deg)'
+    document.body.classList.add('darkmode')
+    window.localStorage.setItem('mode', 'dark')
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.contains('darkmode') ? liteMode() : darkMode()
+})
+
+window.localStorage.getItem('mode') == 'dark' ? darkMode() : liteMode()

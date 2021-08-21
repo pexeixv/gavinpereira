@@ -5,7 +5,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy('./font')
     return {
         dir: {
-            input: 'src',
+            input: '.',
             output: '_site'
         }
     }

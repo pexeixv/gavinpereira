@@ -1,4 +1,5 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css");
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css");
+@import url("//fonts.googleapis.com/icon?family=Material+Icons");
 @font-face {
   font-family: 'Google';
   src: url("../font/ProductSansRegular.ttf") format("truetype");
@@ -154,6 +155,11 @@ h2.section_title {
   filter: invert(1);
 }
 
+.hide-blue {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  tap-highlight-color: transparent;
+}
+
 .header_outer {
   background: var(--background);
   z-index: 9999;
@@ -263,6 +269,35 @@ h2.section_title {
 
 .header_burger-clicked .burger_bar2 {
   transform: translateX(100px);
+}
+
+div.header_theme {
+  transform: rotateZ(-60deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.18s ease-in-out;
+}
+
+.darkmode div.header_theme {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.header_theme_icon {
+  font-size: 1.1rem;
+}
+
+.header_theme,
+.header_theme_icon,
+.header_theme::selection,
+.header_theme_icon::selection {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  tap-highlight-color: transparent;
 }
 
 @media screen and (max-width: 800px) {
@@ -882,6 +917,7 @@ section .port_inner {
 }
 
 .form_placeholder {
+  pointer-events: none;
   cursor: default;
   z-index: 0;
   transition: all 300ms ease-out;
