@@ -13,7 +13,7 @@ layout: 'base.njk'
 
 
 
-    <section class="port port_outer outer">
+    {# <section class="port port_outer outer">
         <div class="port_inner inner">
             <h2 class="port_title section_title">
                 Frontend Projects
@@ -32,114 +32,13 @@ layout: 'base.njk'
                     <p class="post_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iusto sit
                         dolorem maxime quisquam dolor enim accusamus tempora quaerat quo.</p>
                 </div>
-                <div class="post">
-                    <img src="/img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-                </div>
-                <div class="post">
-                    <img src="/img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-                </div>
 
             </div>
             <button class="btn btn-sec port_btn">More</button>
         </div>
-    </section>
+    </section> #}
 
 
-
-    <section class="port port_outer outer">
-        <div class="port_inner inner">
-            <h2 class="port_title section_title">
-                Logo Design Projects
-            </h2>
-            <p class="port_desc section_desc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti provident eligendi nesciunt.
-            </p>
-            <div class="port_grid">
-
-            {% for post in collections.logo %}
-                <div class="post">
-                    <img src="{{post.data.image}}" class="post_image">
-                    <h4 class="post_title">{{post.data.name}}</h4>
-                    <div class="post_tags">
-                        {% for tag in post.data.tech %}
-                        <div class="post_tag">{{tag}}</div>
-                        {% endfor %}
-
-                    </div>
-                    <p class="post_desc">{{post.data.desc}}</p>
-                </div>
-            {% endfor %}
-
-
-            </div>
-            <button class="btn btn-sec port_btn">More</button>
-        </div>
-    </section>
-
-
-
-
-
-    <section class="port port_outer outer">
-        <div class="port_inner inner">
-            <h2 class="port_title section_title">
-                Motion Graphics Projects
-            </h2>
-            <p class="port_desc section_desc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti provident eligendi nesciunt.
-            </p>
-            <div class="port_grid">
-                <div class="post">
-                    <img src="/img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-                </div>
-                <div class="post">
-                    <img src="/img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-                </div>
-                <div class="post">
-                    <img src="/img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-                </div>
-            </div>
-            <button class="btn btn-sec port_btn">More</button>
-        </div>
-    </section>
-    <section class="port port_outer outer">
-        <div class="inner port_inner ">
-            <h2 class="port_title section_title">
-                Graphic Design Projects
-            </h2>
-            <p class="port_desc section_desc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti provident eligendi nesciunt.
-            </p>
-            <div class="port_grid">
-                <div class="post">
-                    <img src="/img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-                </div>
-                <div class="post">
-                    <img src="/img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-                </div>
-                <div class="post">
-                    <img src="/img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-                </div>
-            </div>
-            <button class="btn btn-sec port_btn">More</button>
-        </div>
-    </section>
 
 
 
@@ -148,8 +47,8 @@ layout: 'base.njk'
         <div class="inner port_inner ">
             <h2 class="port_title section_title">{{category.name}}</h2>
             <p class="port_desc section_desc">{{category.desc}}</p>
-            <div class="port_grid port_grid-{{category.id}}"></div>
-            {# <button class="btn btn-sec port_btn">More</button> #}
+            <div class="port_grid"  id="grid-{{category.num}}"></div>
+            <button class="btn btn-sec port_btn" id="btn-{{category.num}}">More</button>
         </div>
     </section>
 {% endfor %}
@@ -181,3 +80,4 @@ layout: 'base.njk'
 {% include 'footer.njk' %}
 
     <script src="/js/script.js"></script>
+    <script src="/js/portfolio.js"></script>

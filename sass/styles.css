@@ -842,13 +842,13 @@ section.main_outer {
 }
 
 section .port_inner {
-  padding: 1.5em 0;
+  padding: 1.5em 0 3em;
 }
 
 .port_grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2em;
+  grid-gap: 3em 2em;
   margin-top: 2em;
 }
 
@@ -859,7 +859,6 @@ section .port_inner {
 @media screen and (max-width: 1000px) {
   .port_grid {
     grid-template-columns: 1fr;
-    grid-row-gap: 3em;
   }
 }
 

@@ -1,0 +1,231 @@
+[
+    {
+        "name": "Four Lensmen",
+        "image": "/img/gallery/post.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": null,
+        "desc": null
+    },
+    {
+        "name": "Sigifi",
+        "image": "/img/gallery/post.jpg",
+        "category": "frontend",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "desc": "I built this website."
+    },
+    {
+        "name": "Reliable Tutorials",
+        "image": "/img/gallery/post.jpg",
+        "category": "frontend",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git"
+        ],
+        "desc": "I built this website."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "frontend",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "frontend",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "frontend",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "motion",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "motion",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "motion",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "logo",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "logo",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "logo",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "logo",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "logo",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "graphic",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "graphic",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    },
+    {
+        "name": "Gavin Pereira",
+        "image": "/img/gallery/post.jpg",
+        "category": "graphic",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at rn."
+    }
+]

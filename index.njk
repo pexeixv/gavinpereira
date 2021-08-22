@@ -42,45 +42,18 @@ layout: 'base.njk'
             <p class="recent_desc section_desc">
                 <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, a! -->
             </p>
-            <div class="recent_grid">
-                <div class="post">
-                    <img src="img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
+            <div class="recent_grid">               
 
-                </div>
-                <div class="post">
-                    <img src="img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
+                {% for i in range(0, 6) %}
+                    <div class="post">
+                        <img src="{{posts[i].image}}" class="post_image">
+                        <h4 class="post_title">{{posts[i].name}}</h4>
+                        <p class="post_desc">{{posts[i].type}}</p>
+                    </div>
+                {% endfor %}
 
-                </div>
-                <div class="post">
-                    <img src="img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-
-                </div>
-                <div class="post">
-                    <img src="img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-
-                </div>
-                <div class="post">
-                    <img src="img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-
-                </div>
-                <div class="post">
-                    <img src="img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <p class="post_desc">Web Dev</p>
-
-                </div>
             </div>
-            <a href="#" class="recent_btn btn btn-primary">View more</a>
+            <a href="/portfolio" class="recent_btn btn btn-primary">View more</a>
         </div>
     </section>
 
