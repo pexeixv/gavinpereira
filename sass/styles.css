@@ -175,6 +175,22 @@ noscript div a {
   text-decoration: underline;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+  background: var(--background-secondary);
+  box-shadow: 0 0 2px -2px black;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--subheading);
+  cursor: pointer;
+}
+
 .header_outer {
   background: var(--background);
   z-index: 9999;
@@ -252,6 +268,7 @@ noscript div a {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--text);
+  line-height: 0.9;
 }
 
 .header_burger {
@@ -342,6 +359,12 @@ div.header_theme {
     left: unset;
     right: -15px;
     transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main_left {
+    padding-top: 2em;
   }
 }
 
@@ -436,6 +459,7 @@ div.header_theme {
 }
 
 .btn, .btn-big {
+  text-align: center;
   cursor: pointer;
   font-weight: 700;
   padding: 0.5em 1em;
@@ -986,6 +1010,14 @@ section .port_inner {
   flex-direction: column;
   gap: 1em;
   align-items: center;
+}
+
+.address_line {
+  text-align: center;
+}
+
+.address {
+  margin-top: 2em;
 }
 
 .links_inner {

@@ -64,6 +64,7 @@
     font-weight: 700
     font-size: 1.5rem
     color: var(--text)
+    line-height: 0.9
 .header_burger
     display: none
 
@@ -144,6 +145,10 @@ div.header_theme
             left: unset
             right: -15px
             transform: translateY(-50%)
+
+@media screen and ( max-width: 800px )
+    .main_left
+        padding-top: 2em
 
 .header_nav-expanded
     height: max-content

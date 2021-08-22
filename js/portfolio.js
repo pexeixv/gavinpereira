@@ -2,7 +2,6 @@ var xhr = new XMLHttpRequest()
 var url = '/_data/posts.json'
 xhr.onload = e => {
     var data = JSON.parse(xhr.response)
-    console.log(data)
     injectAll(data)
 }
 xhr.open("GET", url, true)
