@@ -1,0 +1,65 @@
+---
+title: Links
+layout: 'base.njk'
+
+---
+
+
+<div class="header_outer outer">
+    <header class="header header_inner inner">
+        <a href="/">
+            <div class="header_logo">
+                <img src="/img/logo.svg" alt="Gavin Pereira logo" class="header_logo_icon logo">
+                <span class="header_logo_text">Gavin Pereira</span>
+            </div>
+        </a>
+            <div class="header_buttons">
+            <div class="header_theme hide-blue"></div>
+        </div>
+    </header>
+</div>
+<div style="min-height: 70px; background: var(--background-secondary);"></div>
+
+
+<div class="links_header_outer outer">
+    <div class="links_header links_header_inner links_inner">
+        {# <h1 class="links_title">Gavin Pereira</h1> #}
+        <img src="/img/GavinPereira.png" alt="Gavin Pereira" title="Gavin Pereira" class="links_image">
+        <img src="/img/shapes.svg" onload="SVGInject(this)" class="links_shapes">
+
+    </div>
+</div>
+
+<div class="links_footer">
+    <div class="links_long_outer outer">
+        <div class="links_long links_long_inner links_inner">
+            {% for link in links.long %}
+                <a href="{{link.link}}" class="links_long_link">
+                    {% if link.classes %}
+                        <i class="{{link.classes[0]}} {{link.classes[1]}} links_long_icon"></i>
+                    {% endif %}
+                    <span class="links_long_text">{{link.name}}</span>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="links_short_outer outer">
+        <div class="links_short links_short_inner links_inner">
+            {% for link in links.short %}
+                <a class="btn-round " href="{{link.link}}" target="_blank">
+                    <div><i class="{{link.classes[0]}} {{link.classes[1]}}"></i></div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script src="/js/script.js"></script>

@@ -1,0 +1,54 @@
+{
+    "long": [
+        {
+            "name": "Link with Icon",
+            "link": "//google.com",
+            "classes": [
+                "fab",
+                "fa-facebook"
+            ]
+        },
+        {
+            "name": "Link without Icon",
+            "link": "//google.com",
+            "classes": null
+        }
+    ],
+    "short": [
+        {
+            "link": "//facebook.com/pexeixv",
+            "classes": [
+                "fab",
+                "fa-facebook-f"
+            ]
+        },
+        {
+            "link": "//instagr.am/pexeixv",
+            "classes": [
+                "fab",
+                "fa-instagram"
+            ]
+        },
+        {
+            "link": "//codepen.io/pexeixv",
+            "classes": [
+                "fab",
+                "fa-codepen"
+            ]
+        },
+        {
+            "link": "//github.com/pexeixv",
+            "classes": [
+                "fab",
+                "fa-github"
+            ]
+        },
+        {
+            "link": "//linkedin.com/in/gavinpereirain",
+            "classes": [
+                "fab",
+                "fa-linkedin"
+            ]
+        }
+    ]
+}

@@ -1,11 +1,14 @@
 var burger = document.querySelector('.header_burger ')
 var nav = document.querySelector('.header_nav')
+if (burger) {
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('header_burger-clicked')
+        nav.classList.toggle('header_nav-expanded')
+    })
+    var body = document.body
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('header_burger-clicked')
-    nav.classList.toggle('header_nav-expanded')
-})
-var body = document.body
+}
+
 let lastScroll = 0
 window.addEventListener('scroll', () => {
     var currentScroll = window.pageYOffset

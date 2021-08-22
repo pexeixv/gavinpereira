@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Person name",
+        "desgn": "Designation",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente reiciendis",
+        "image": "/img/person.png"
+    },
+    {
+        "name": "Person name",
+        "desgn": "Designation",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente reiciendis",
+        "image": "/img/person.png"
+    },
+    {
+        "name": "Person name",
+        "desgn": "Designation",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente reiciendis",
+        "image": "/img/person.png"
+    }
+]

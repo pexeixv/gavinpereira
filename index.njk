@@ -22,7 +22,7 @@ layout: 'base.njk'
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.
                 </p>
                 <div class="main_ctas">
-                    <a href="#" class="btn btn-pri">Get in touch</a>
+                    <a href="/contact" class="btn btn-pri">Get in touch</a>
                     <a href="#" class="btn btn-sec">Résumé</a>
                 </div>
             </div>
@@ -68,36 +68,16 @@ layout: 'base.njk'
             </p>
 
             <div class="tests_grid">
-                <div class="test">
-                    <img src="img/person.png" alt="" class="test_image">
-                    <q class="test_quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias
-                        consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore
-                        velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente
-                        reiciendis
-                        labore molestiae!</q>
-                    <h4 class="test_name">Person name</h4>
-                    <h5 class="test_desg">Designation</h5>
-                </div>
-                <div class="test">
-                    <img src="img/person.png" alt="" class="test_image">
-                    <q class="test_quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias
-                        consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore
-                        velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente
-                        reiciendis
-                        labore molestiae!</q>
-                    <h4 class="test_name">Person name</h4>
-                    <h5 class="test_desg">Designation</h5>
-                </div>
-                <div class="test">
-                    <img src="img/person.png" alt="" class="test_image">
-                    <q class="test_quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias
-                        consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore
-                        velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente
-                        reiciendis
-                        labore molestiae!</q>
-                    <h4 class="test_name">Person name</h4>
-                    <h5 class="test_desg">Designation</h5>
-                </div>
+
+                {% for test in testimonials %}
+                    <div class="test">
+                        <img src="{{test.image}}" alt="{{test.name}}" title="{{test.name}}" class="test_image">
+                        <q class="test_quote">{{test.quote}}</q>
+                        <h4 class="test_name">{{test.name}}</h4>
+                        <h5 class="test_desg">{{test.desgn}}</h5>
+                    </div>
+                {% endfor %}
+
             </div>
         </div>
     </section>
@@ -110,11 +90,9 @@ layout: 'base.njk'
                 I have worked with
             </h2>
             <div class="clients_grid">
-                <img class="client_logo" src="img/clients/adrpro.png">
-                <img class="client_logo" src="img/clients/zb.png">
-                <img class="client_logo" src="img/clients/4L.png">
-                <img class="client_logo" src="img/clients/adrstudio.png">
-                <img class="client_logo" src="img/clients/macmo.png">
+                {% for client in clients %}
+                    <img class="client_logo" src="{{client.image}}" alt="{{client.name}}" title="{{client.name}}">
+                {% endfor %}
             </div>
         </div>
     </section>
