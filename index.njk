@@ -27,7 +27,7 @@ layout: 'base.njk'
             <div class="main_right">
                 <img src="/img/gavin-pereira.png" class="main_hero" alt="Gavin Pereira portrait">
                 <img src="/img/shapes.svg" onload="SVGInject(this)" class="main_shapes">
-                <div class="main_piracy"></div>
+                <div class="piracy"></div>
             </div>
         </main>
     </div>
@@ -94,6 +94,7 @@ layout: 'base.njk'
                 {% for client in clients %}
                     <img class="client_logo" src="{{client.image}}" alt="{{client.name}}" title="{{client.name}}">
                 {% endfor %}
+                <div class="piracy"></div>
             </div>
         </div>
     </section>

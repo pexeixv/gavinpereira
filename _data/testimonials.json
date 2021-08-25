@@ -1,20 +1,20 @@
 [
     {
-        "name": "Person name",
-        "desgn": "Designation",
+        "name": "Stanley Thomas",
+        "desgn": "Systems Administrator",
         "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente reiciendis",
         "image": "/img/person.png"
     },
     {
-        "name": "Person name",
-        "desgn": "Designation",
-        "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente reiciendis",
+        "name": "Chris Morgan",
+        "desgn": "Macmostore",
+        "quote": "Gavin creates minimalistic designs that bring out the best of his work which is simple & elegant. He is prompt has a great eye for design & is patient. He can really help your business in developing an identity. I appreciate his craft, transparency & would definitely recommend him.",
         "image": "/img/person.png"
     },
     {
-        "name": "Person name",
-        "desgn": "Designation",
-        "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque molestias consequuntur eveniet, laboriosam dignissimos sit odit facere, sunt cupiditate impedit dolore velit exercitationem nulla eum dolorem fuga dolores veniam optio, inventore sapiente reiciendis",
+        "name": "Aaron Rodrigues",
+        "desgn": "ADR Pro System",
+        "quote": "Gavin is an amazing & creative graphic designer. I'm glad to be associated with him & the quality he delivers. Highly recommend his service.",
         "image": "/img/person.png"
     }
 ]

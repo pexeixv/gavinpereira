@@ -159,6 +159,13 @@ h2.section_title {
   tap-highlight-color: transparent;
 }
 
+.piracy {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
 noscript div {
   min-height: 100vh;
   background: black;
@@ -704,13 +711,6 @@ section.main_outer {
   gap: 1em;
 }
 
-.main_piracy {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
 @media screen and (max-width: 1250px) {
   .main_title {
     font-size: 3.5rem;
@@ -848,10 +848,12 @@ section.main_outer {
   justify-content: space-between;
   max-width: 700px;
   width: 90%;
+  position: relative;
   margin: 4em auto 2em;
 }
 
 .client_logo {
+  z-index: 1;
   height: 70px;
 }
 
