@@ -523,6 +523,8 @@ div.header_theme {
   align-items: flex-start;
   gap: 0.5em;
   max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .post_title {
@@ -879,6 +881,7 @@ section .port_inner {
 }
 
 .port_grid {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3em 2em;
