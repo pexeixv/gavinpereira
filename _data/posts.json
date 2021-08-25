@@ -144,8 +144,8 @@
         ]
     },
     {
-        "name": "Sigifi",
-        "image": "post.png",
+        "name": "Sigifi.org",
+        "image": "signifi.jpg",
         "category": "frontend",
         "type": "Frontend Development",
         "tags": [
@@ -153,7 +153,7 @@
             "CSS",
             "JavaScript"
         ],
-        "desc": "I built this website."
+        "desc": "A single page website for Signifi.org to sell Wordpress hosting packages."
     },
     {
         "name": "Reliable Tutorials",
@@ -170,7 +170,7 @@
     },
     {
         "name": "Gavin Pereira",
-        "image": "post.png",
+        "image": "gavin-pereira.gif",
         "category": "frontend",
         "type": "Frontend Development",
         "tags": [
@@ -180,6 +180,6 @@
             "Git",
             "11ty"
         ],
-        "desc": "The website you're looking at rn."
+        "desc": "Portfolio website for myself. The website you're looking at right now."
     }
 ]
