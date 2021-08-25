@@ -549,6 +549,13 @@ div.header_theme {
   background: var(--button);
 }
 
+.post_image_flex {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+
 .banner_outer {
   background: var(--background-secondary);
   padding: 5em 0 5em;
@@ -625,6 +632,10 @@ section.main_outer {
   overflow: visible;
   width: 98vw;
   gap: 5vw;
+}
+
+.main_title {
+  line-height: 1.2;
 }
 
 .main_right {

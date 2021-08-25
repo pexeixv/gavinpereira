@@ -14,16 +14,14 @@ layout: 'base.njk'
         <main class="main main_inner inner">
             <div class="main_left">
                 <h1 class="main_title">
-                    Here’s my totally awesome heading!
+                    I craft beautiful web experiences.
                 </h1>
                 <p class="main_desc">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                    tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.
+                    I'm Gavin Pereira, a graphic designer and frontend developer from Goa.
                 </p>
                 <div class="main_ctas">
                     <a href="/contact" class="btn btn-pri">Get in touch</a>
-                    <a href="#" class="btn btn-sec">Résumé</a>
+                    {# <a href="#" class="btn btn-sec">Résumé</a> #}
                 </div>
             </div>
             <div class="main_right">
@@ -46,7 +44,9 @@ layout: 'base.njk'
 
                 {% for i in range(0, 6) %}
                     <div class="post">
-                        <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].image}}" class="post_image">
+                        <div class="post_image_flex">
+                            <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].image}}" class="post_image">
+                        </div>
                         <h4 class="post_title">{{posts[i].name}}</h4>
                         <p class="post_desc">{{posts[i].type}}</p>
                     </div>
