@@ -1,15 +1,115 @@
 [
     {
         "name": "Four Lensmen",
-        "image": "/img/gallery/post.jpg",
+        "image": "four-lensmen.jpg",
         "category": "logo",
         "type": "Identity Design",
-        "tags": null,
-        "desc": null
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "ADR Pro System",
+        "image": "adr-pro-system.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "ADR Music Studio",
+        "image": "adr-music-studio.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Aaron Divino",
+        "image": "aaron-divino.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Ruan's Photography",
+        "image": "ruans-photography.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Myron D'costa Photography",
+        "image": "myron-dcosta.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Club Acoustica",
+        "image": "club-acoustica.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Cadentia Projects",
+        "image": "cadentia-projects.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Nayden da Silva",
+        "image": "nayden-da-silva.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Chris Morgan",
+        "image": "chris-morgan.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Melta Cafe",
+        "image": "melta-cafe.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Swami Homestay Resort",
+        "image": "swami-homestay.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
     },
     {
         "name": "Sigifi",
-        "image": "/img/gallery/post.jpg",
+        "image": "post.png",
         "category": "frontend",
         "type": "Frontend Development",
         "tags": [
@@ -21,7 +121,7 @@
     },
     {
         "name": "Reliable Tutorials",
-        "image": "/img/gallery/post.jpg",
+        "image": "post.png",
         "category": "frontend",
         "type": "Frontend Development",
         "tags": [
@@ -34,190 +134,8 @@
     },
     {
         "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
+        "image": "post.png",
         "category": "frontend",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "frontend",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "frontend",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "motion",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "motion",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "motion",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "logo",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "logo",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "logo",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "logo",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "logo",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "graphic",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "graphic",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "The website you're looking at rn."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "/img/gallery/post.jpg",
-        "category": "graphic",
         "type": "Frontend Development",
         "tags": [
             "HTML",

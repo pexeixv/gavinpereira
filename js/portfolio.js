@@ -13,7 +13,7 @@ xhr.send()
 var postSnippet = post => {
     var string = ''
     string += `<div class="post">
-    <img src="${post.image}" class="post_image">
+    <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/${post.image}" class="post_image">
     <h4 class="post_title">${post.name}</h4>
     <div class="post_tags">`
 
