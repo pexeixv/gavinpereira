@@ -33,25 +33,14 @@ var postSnippet = post => {
 }
 
 var injectAll = posts => {
-    var types = {
-        1: {
-            "name": "frontend",
-            "posts": posts.filter(post => post.category == 'frontend')
-        },
-        2: {
-            "name": "logo",
-            "posts": posts.filter(post => post.category == 'logo')
-        },
-        3: {
-            "name": "motion",
-            "posts": posts.filter(post => post.category == 'motion')
-        },
-        4: {
-            "name": "graphic",
-            "posts": posts.filter(post => post.category == 'graphic')
-        }
 
-    }
+    var categories = [
+        posts.filter(post => post.category == 'frontend'),
+        posts.filter(post => post.category == 'logo'),
+        posts.filter(post => post.category == 'motion'),
+        posts.filter(post => post.category == 'graphic')
+    ]
+
 
     var inject = e => {
         var id = e.target.id.slice(-1)
@@ -59,16 +48,16 @@ var injectAll = posts => {
         var grid = document.querySelector(`div#grid-${id}`)
         var limit = 3
         var printed = +grid.dataset.printed || 0
-        var total = +grid.dataset.total || types[id].posts.length
+        var total = +grid.dataset.total || categories[id - 1].length
         if (printed + limit < total) {
             for (var i = printed; i < printed + limit; i++)
-                grid.innerHTML += postSnippet(types[id].posts[i])
+                grid.innerHTML += postSnippet(categories[id - 1][i])
             printed += limit
             grid.dataset.total = +total
             grid.dataset.printed = +printed
         } else {
             for (var i = printed; i < total; i++)
-                grid.innerHTML += postSnippet(types[id].posts[i])
+                grid.innerHTML += postSnippet(categories[id - 1][i])
             button.style.display = 'none'
             grid.dataset.total = +total
             grid.dataset.printed = +total
