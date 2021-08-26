@@ -1,20 +1,71 @@
 [
     {
-        "name": "ADR Pro System",
-        "image": "adr-pro-system-banner.jpg",
-        "category": "graphic",
-        "type": "Banner",
+        "name": "Gavin Pereira",
+        "image": "gavin-pereira.gif",
+        "category": "frontend",
+        "type": "Frontend Development",
         "tags": [
-            "Banner"
-        ]
+            "Nunjucks",
+            "Sass",
+            "JavaScript",
+            "Git",
+            "11ty"
+        ],
+        "desc": "The website you're looking at right now. 😛",
+        "link": "gavinpereira.in"
     },
     {
-        "name": "SALTŤ Kitchen 'n Bar",
+        "name": "SALTŤ Kitchen",
         "image": "saltt-kitchen.jpg?updatedAt=1629984412878",
         "category": "graphic",
         "type": "Social Media Flyer",
         "tags": [
             "Social Media Flyer"
+        ]
+    },
+    {
+        "name": "Reliable Tutorials",
+        "image": "reliable-tutorials.jpg",
+        "category": "frontend",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "Sass",
+            "JavaScript",
+            "Git"
+        ],
+        "desc": "Business website for a Mathematics coaching center.",
+        "link": "reliabletutorials.com"
+    },
+    {
+        "name": "Signifi",
+        "image": "signifi.jpg",
+        "category": "frontend",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "Sass",
+            "JavaScript"
+        ],
+        "desc": "Website to sell Wordpress hosting packages.",
+        "link": "signifi.org"
+    },
+    {
+        "name": "Swami Homestay Resort",
+        "video": "swami-homestay.mp4",
+        "category": "motion",
+        "type": "Logo Animation",
+        "tags": [
+            "Logo Animation"
+        ]
+    },
+    {
+        "name": "Aaron Divino",
+        "image": "aaron-divino.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
         ]
     },
     {
@@ -27,6 +78,15 @@
         ]
     },
     {
+        "name": "Swami Homestay Resort",
+        "image": "swami-homestay.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
         "name": "Pradyumna Prabhudesai",
         "video": "pradyumna-prabhudesai.mp4",
         "category": "motion",
@@ -36,12 +96,21 @@
         ]
     },
     {
-        "name": "ADR Pro System",
-        "video": "adr-pro-system-mic.mp4?updatedAt=1629971057467",
-        "category": "motion",
-        "type": "Product Banner",
+        "name": "Melta Cafe",
+        "image": "melta-cafe.jpg",
+        "category": "logo",
+        "type": "Identity Design",
         "tags": [
-            "Product Banner"
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "ADR Pro System",
+        "image": "adr-pro-system-banner.jpg",
+        "category": "graphic",
+        "type": "Banner",
+        "tags": [
+            "Banner"
         ]
     },
     {
@@ -54,17 +123,8 @@
         ]
     },
     {
-        "name": "Swami Homestay Resort",
-        "video": "swami-homestay.mp4",
-        "category": "motion",
-        "type": "Logo Animation",
-        "tags": [
-            "Logo Animation"
-        ]
-    },
-    {
-        "name": "Four Lensmen",
-        "image": "four-lensmen.jpg",
+        "name": "Chris Morgan",
+        "image": "chris-morgan.jpg",
         "category": "logo",
         "type": "Identity Design",
         "tags": [
@@ -73,7 +133,25 @@
     },
     {
         "name": "ADR Pro System",
-        "image": "adr-pro-system.jpg",
+        "video": "adr-pro-system-mic.mp4?updatedAt=1629971057467",
+        "category": "motion",
+        "type": "Product Banner",
+        "tags": [
+            "Product Banner"
+        ]
+    },
+    {
+        "name": "Cadentia Projects",
+        "image": "cadentia-projects.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "Nayden da Silva",
+        "image": "nayden-da-silva.jpg",
         "category": "logo",
         "type": "Identity Design",
         "tags": [
@@ -90,17 +168,8 @@
         ]
     },
     {
-        "name": "Aaron Divino",
-        "image": "aaron-divino.jpg",
-        "category": "logo",
-        "type": "Identity Design",
-        "tags": [
-            "Identity Design"
-        ]
-    },
-    {
-        "name": "Ruan's Photography",
-        "image": "ruans-photography.jpg",
+        "name": "Four Lensmen",
+        "image": "four-lensmen.jpg",
         "category": "logo",
         "type": "Identity Design",
         "tags": [
@@ -126,8 +195,8 @@
         ]
     },
     {
-        "name": "Cadentia Projects",
-        "image": "cadentia-projects.jpg",
+        "name": "Ruan's Photography",
+        "image": "ruans-photography.jpg",
         "category": "logo",
         "type": "Identity Design",
         "tags": [
@@ -135,78 +204,12 @@
         ]
     },
     {
-        "name": "Nayden da Silva",
-        "image": "nayden-da-silva.jpg",
+        "name": "ADR Pro System",
+        "image": "adr-pro-system.jpg",
         "category": "logo",
         "type": "Identity Design",
         "tags": [
             "Identity Design"
         ]
-    },
-    {
-        "name": "Chris Morgan",
-        "image": "chris-morgan.jpg",
-        "category": "logo",
-        "type": "Identity Design",
-        "tags": [
-            "Identity Design"
-        ]
-    },
-    {
-        "name": "Melta Cafe",
-        "image": "melta-cafe.jpg",
-        "category": "logo",
-        "type": "Identity Design",
-        "tags": [
-            "Identity Design"
-        ]
-    },
-    {
-        "name": "Swami Homestay Resort",
-        "image": "swami-homestay.jpg",
-        "category": "logo",
-        "type": "Identity Design",
-        "tags": [
-            "Identity Design"
-        ]
-    },
-    {
-        "name": "Sigifi.org",
-        "image": "signifi.jpg",
-        "category": "frontend",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-        "desc": "A single page website for Signifi.org to sell Wordpress hosting packages."
-    },
-    {
-        "name": "Reliable Tutorials",
-        "image": "post.png",
-        "category": "frontend",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git"
-        ],
-        "desc": "I built this website."
-    },
-    {
-        "name": "Gavin Pereira",
-        "image": "gavin-pereira.gif",
-        "category": "frontend",
-        "type": "Frontend Development",
-        "tags": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "11ty"
-        ],
-        "desc": "Portfolio website for myself. The website you're looking at right now."
     }
 ]

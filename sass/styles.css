@@ -571,6 +571,14 @@ div.header_theme {
   place-items: center;
 }
 
+.post_link {
+  color: var(--button);
+}
+
+.post_link:hover {
+  text-decoration: underline;
+}
+
 .banner_outer {
   background: var(--background-secondary);
   padding: 5em 0 5em;

@@ -46,7 +46,10 @@ layout: 'base.njk'
     <section class="port port_outer outer">
         <div class="inner port_inner ">
             <h2 class="port_title section_title">{{category.name}}</h2>
-            <p class="port_desc section_desc">{{category.desc}}</p>
+            {% if category.desc %}
+                <p class="port_desc section_desc">{{category.desc}}</p>
+            {% endif %}
+
             <div class="port_grid"  id="grid-{{category.num}}"></div>
             <button class="btn btn-sec port_btn" id="btn-{{category.num}}">More</button>
         </div>
