@@ -1,5 +1,32 @@
 [
     {
+        "name": "ADR Pro System",
+        "image": "adr-pro-system-banner.jpg",
+        "category": "graphic",
+        "type": "Banner",
+        "tags": [
+            "Banner"
+        ]
+    },
+    {
+        "name": "SALTŤ Kitchen 'n Bar",
+        "image": "saltt-kitchen.jpg?updatedAt=1629984412878",
+        "category": "graphic",
+        "type": "Social Media Flyer",
+        "tags": [
+            "Social Media Flyer"
+        ]
+    },
+    {
+        "name": "ADR Music Studio",
+        "image": "adr-music-studio-banner.jpg?updatedAt=1629983765910",
+        "category": "graphic",
+        "type": "Banner",
+        "tags": [
+            "Banner"
+        ]
+    },
+    {
         "name": "Pradyumna Prabhudesai",
         "video": "pradyumna-prabhudesai.mp4",
         "category": "motion",
