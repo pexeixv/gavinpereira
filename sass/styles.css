@@ -806,6 +806,26 @@ section.main_outer {
   max-width: 1000px;
 }
 
+.test_tint {
+  position: relative;
+  border-radius: 100vw;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+}
+
+.test_tint::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  background: var(--primary);
+  z-index: 5;
+  width: 150px;
+  height: 150px;
+}
+
 .test_quote {
   padding: 2em 1.5em 1em;
   font-size: 0.9rem;

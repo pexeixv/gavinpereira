@@ -72,7 +72,9 @@ layout: 'base.njk'
 
                 {% for test in testimonials %}
                     <div class="test">
-                        <img src="{{test.image}}" alt="{{test.name}}" title="{{test.name}}" class="test_image">
+                        <div class="test_tint">
+                            <img src="{{test.image}}" alt="{{test.name}}" title="{{test.name}}" class="test_image">
+                        </div>
                         <q class="test_quote">{{test.quote}}</q>
                         <h4 class="test_name">{{test.name}}</h4>
                         <h5 class="test_desg">{{test.desgn}}</h5>
