@@ -28,19 +28,9 @@ layout: 'base.njk'
                 Knowledge
             </h2>
             <div class="know_grid">
-                    <img class="know_img" src="/img/tech/C.svg" alt="" srcset="" title="C">
-                    <img class="know_img" src="/img/tech/CSS3.svg" alt="" srcset="" title="CSS3">
-                    <img class="know_img" src="/img/tech/HTML5.svg" alt="" srcset="" title="HTML5">
-                    <img class="know_img" src="/img/tech/Java.svg" alt="" srcset="" title="Java">
-                    <img class="know_img" src="/img/tech/JavaScript.svg" alt="" srcset="" title="JavaScript">
-                    <img class="know_img" src="/img/tech/Python.svg" alt="" srcset="" title="Python">
-                    <img class="know_img" src="/img/tech/C.svg" alt="" srcset="" title="C">
-                    <img class="know_img" src="/img/tech/CSS3.svg" alt="" srcset="" title="CSS3">
-                    <img class="know_img" src="/img/tech/HTML5.svg" alt="" srcset="" title="HTML5">
-                    <img class="know_img" src="/img/tech/Java.svg" alt="" srcset="" title="Java">
-                    <img class="know_img" src="/img/tech/JavaScript.svg" alt="" srcset="" title="JavaScript">
-                    <img class="know_img" src="/img/tech/Python.svg" alt="" srcset="" title="Python">
-                    
+                    {% for icon in knowledge %}
+                        <img class="know_img" src="/img/tech/{{ icon.name | lowerAndHyphen }}.svg" alt="{{icon.name}}"" title="{{icon.name}}">
+                    {% endfor %}                    
             </div>
         </div>
     </section>
