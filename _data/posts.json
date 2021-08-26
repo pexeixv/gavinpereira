@@ -1,7 +1,7 @@
 [
     {
         "name": "Pradyumna Prabhudesai",
-        "image": "pradyumna-prabhudesai.gif?updatedAt=1629894063520",
+        "video": "pradyumna-prabhudesai.mp4",
         "category": "motion",
         "type": "Intro Video",
         "tags": [
@@ -10,7 +10,7 @@
     },
     {
         "name": "ADR Pro System",
-        "image": "adr-pro-system-mic.gif",
+        "video": "adr-pro-system-mic.mp4?updatedAt=1629971057467",
         "category": "motion",
         "type": "Product Banner",
         "tags": [
@@ -19,7 +19,7 @@
     },
     {
         "name": "Chris Morgan",
-        "image": "chris-morgan-test.gif",
+        "video": "chris-morgan.mp4?updatedAt=1629971587411",
         "category": "motion",
         "type": "Intro Video",
         "tags": [
@@ -28,7 +28,7 @@
     },
     {
         "name": "Swami Homestay Resort",
-        "image": "swami-homestay.gif?updatedAt=1629884054947",
+        "video": "swami-homestay.mp4",
         "category": "motion",
         "type": "Logo Animation",
         "tags": [
