@@ -1,7 +1,7 @@
 # Gavin Pereira
 
 <center>
-    <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-900/gavin-pereira.gif">
+    <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-500/gavin-pereira.gif">
 </center>
 
 <br>
