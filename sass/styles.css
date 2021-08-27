@@ -174,7 +174,7 @@ noscript div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  grid-gap: 1em;
 }
 
 noscript div a {
@@ -214,7 +214,7 @@ noscript div a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2em;
+  grid-gap: 2em;
   height: 70px;
 }
 
@@ -238,7 +238,7 @@ noscript div a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1.5em;
+  grid-gap: 1.5em;
 }
 
 .nav_link {
@@ -266,7 +266,7 @@ noscript div a {
 .header_logo {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  grid-gap: 0.5em;
 }
 
 .header_logo_icon {
@@ -289,7 +289,7 @@ noscript div a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  grid-gap: 1em;
 }
 
 .burger_bar {
@@ -355,7 +355,7 @@ div.header_theme {
     position: absolute;
     top: 70px;
     left: 0;
-    gap: 3em;
+    grid-gap: 3em;
     padding: 3em 0;
     align-items: center;
     width: 100%;
@@ -414,7 +414,7 @@ div.header_theme {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.5em;
+  grid-gap: 0.5em;
 }
 
 .footer_logo_text {
@@ -451,7 +451,7 @@ div.header_theme {
   justify-content: flex-end;
   display: flex;
   flex-direction: row;
-  gap: 0.5em;
+  grid-gap: 0.5em;
   align-items: center;
 }
 
@@ -460,7 +460,7 @@ div.header_theme {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75em;
+    grid-gap: 0.75em;
   }
   .footer > * {
     width: unset;
@@ -515,7 +515,7 @@ div.header_theme {
   border: none;
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  grid-gap: 0.5em;
   background: var(--subheading);
   color: var(--background);
 }
@@ -528,7 +528,7 @@ div.header_theme {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5em;
+  grid-gap: 0.5em;
   max-width: 460px;
   width: 100%;
   margin: 0 auto;
@@ -547,7 +547,7 @@ div.header_theme {
 .post_tags {
   display: flex;
   align-items: center;
-  gap: 0.2em;
+  grid-gap: 0.2em;
 }
 
 .post_tag {
@@ -591,7 +591,7 @@ div.header_theme {
   align-items: center;
   justify-content: space-between;
   padding: 2em 3em;
-  gap: 1.5em;
+  grid-gap: 1.5em;
 }
 
 .banner_title {
@@ -654,7 +654,7 @@ section.main_outer {
   justify-content: flex-end;
   overflow: visible;
   width: 98vw;
-  gap: 5vw;
+  grid-gap: 5vw;
 }
 
 .main_title {
@@ -702,7 +702,7 @@ section.main_outer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1em;
+  grid-gap: 1em;
   align-items: flex-start;
 }
 
@@ -722,7 +722,7 @@ section.main_outer {
   margin-top: 0.5em;
   display: flex;
   align-items: center;
-  gap: 1em;
+  grid-gap: 1em;
 }
 
 @media screen and (max-width: 1250px) {
@@ -955,7 +955,7 @@ section .port_inner {
   margin: 2em auto 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  grid-gap: 1em;
 }
 
 .know_img {
@@ -983,7 +983,7 @@ section .port_inner {
   justify-content: center;
   width: 100%;
   display: flex;
-  gap: 2em;
+  grid-gap: 2em;
 }
 
 .form_row > * {
@@ -1048,7 +1048,7 @@ section .port_inner {
 @media screen and (max-width: 650px) {
   .form_row {
     flex-direction: column;
-    gap: 0;
+    grid-gap: 0;
   }
   .form_email {
     margin-top: 60px;
@@ -1058,17 +1058,17 @@ section .port_inner {
 .socials_row {
   display: flex;
   justify-content: center;
-  gap: 0.5em;
+  grid-gap: 0.5em;
 }
 
 .socials_row-big {
-  gap: 1em;
+  grid-gap: 1em;
 }
 
 .socials {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  grid-gap: 1em;
   align-items: center;
 }
 
@@ -1108,7 +1108,7 @@ section .port_inner {
 .links_short {
   display: flex;
   align-items: center;
-  gap: 1em;
+  grid-gap: 1em;
   justify-content: center;
 }
 
@@ -1119,7 +1119,7 @@ section .port_inner {
 .links_long {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  grid-gap: 30px;
 }
 
 .links_long_icon {
