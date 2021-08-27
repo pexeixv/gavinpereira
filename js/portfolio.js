@@ -43,11 +43,10 @@ var injectAll = posts => {
         posts.filter(post => post.category == 'graphic')
     ]
 
-
     var inject = e => {
         var id = e.target.id.slice(-1)
-        var button = document.querySelector(`button#btn-${id}`)
-        var grid = document.querySelector(`div#grid-${id}`)
+        var button = $(`button#btn-${id}`)
+        var grid = $(`div#grid-${id}`)
         var limit = 3
         var printed = +grid.dataset.printed || 0
         var total = +grid.dataset.total || categories[id - 1].length
@@ -66,8 +65,7 @@ var injectAll = posts => {
         }
     }
 
-
-    buttons = document.querySelectorAll('.port_btn')
+    buttons = $$('.port_btn')
     buttons.forEach(button => {
         button.addEventListener('click', inject)
         button.click()

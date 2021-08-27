@@ -1,24 +1,21 @@
-var $ = (sel,con) => {return (con||document).querySelector(sel)}
-var $$ = (sel,con) => {return (con||document).querySelectorAll(sel)}
+var $ = (sel, con) => { return (con || document).querySelector(sel) }
+var $$ = (sel, con) => { return (con || document).querySelectorAll(sel) }
 
 var burger = $('.header_burger ')
 var nav = $('.header_nav')
 var body = document.body
-if (burger) {
+if (burger)
     burger.addEventListener('click', () => {
         burger.classList.toggle('header_burger-clicked')
         nav.classList.toggle('header_nav-expanded')
     })
 
-}
-
 let lastScroll = 0
 window.addEventListener('scroll', () => {
     var currentScroll = window.pageYOffset
 
-    if (currentScroll <= 0) {
+    if (currentScroll <= 0)
         body.classList.remove('scroll-up')
-    }
     if (currentScroll > lastScroll && !body.classList.contains('scroll-down')) {
         body.classList.remove('scroll-up')
         body.classList.add('scroll-down')
@@ -34,7 +31,7 @@ window.addEventListener('scroll', () => {
 
 var mode = window.localStorage.getItem('mode')
 
-mode == 'dark'? body.classList.add('darkmode') : body.classList.remove('darkmode')
+mode == 'dark' ? body.classList.add('darkmode') : body.classList.remove('darkmode')
 
 
 
