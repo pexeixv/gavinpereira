@@ -14,7 +14,7 @@ layout: 'base.njk'
             <h2 class="contact_title section_title">
                 Drop me a line
             </h2>
-            <form action="" class="contact_form">
+            <form netlify class="contact_form" name="contact" method="POST">
 
                 <div class="form_row">
                     <div class="form_name">
@@ -30,10 +30,13 @@ layout: 'base.njk'
                 </div>
                 <div class="form_row">
                     <div class="form_message">
-                        <textarea name="" id="form-message" cols="100" rows="10" class="form_message_input form_field"
+                        <textarea name="Message" id="form-message" cols="100" rows="10" class="form_message_input form_field"
                             required="required" placeholder=" "></textarea>
                         <label class="form_message_text form_placeholder">Message</label>
                     </div>
+                </div>
+                <div class="form_row">
+                    <div data-netlify-recaptcha="true"></div>
                 </div>
                 <div class="form_row">
                     <input type="submit" value="Send" class="form_submit btn btn-pri">
