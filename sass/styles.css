@@ -55,6 +55,7 @@ body {
   --button-hover: #0D544E;
   --button-text: #FFFFFF;
   --shadow: rgba(0, 0, 0, 0.3);
+  --scrollbar: #bed4d2;
 }
 
 .darkmode {
@@ -70,6 +71,7 @@ body {
   --button-hover: #5CEBDF;
   --button-text: #083564;
   --shadow: rgba(255, 255, 255, 0.4);
+  --scrollbar: #29404a;
 }
 
 body.dark {
@@ -197,7 +199,7 @@ noscript div a {
 ::-webkit-scrollbar-thumb {
   transition: all 300ms;
   border-radius: 5px;
-  background: var(--subheading);
+  background: var(--scrollbar);
   cursor: pointer;
 }
 
