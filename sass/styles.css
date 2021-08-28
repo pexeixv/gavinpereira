@@ -1083,6 +1083,7 @@ section .port_inner {
 .g-recaptcha {
   display: grid;
   place-items: center;
+  margin-top: 2em;
 }
 
 .links_inner {
