@@ -1,12 +1,10 @@
-# Gavin Pereira
+# <p align="center"><img width="400" src="./img/wordmark.svg"></p>
 
-<center>
-    <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-500/gavin-pereira.gif">
-</center>
+<p align="center">
+    <img src="./img/preview.gif">
+</p>
 
-<br>
-<br>
-
-Total time<br>
-
-![wakatime](https://wakatime.com/badge/github/pexeixv/gavinpereira.svg)
+<p align="center">
+    Total time<br>
+    <img src="https://wakatime.com/badge/github/pexeixv/gavinpereira.svg">
+</p>
