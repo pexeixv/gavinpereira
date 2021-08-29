@@ -1055,6 +1055,9 @@ section .port_inner {
   .form_email {
     margin-top: 60px;
   }
+  .socials_row-big {
+    flex-direction: column;
+  }
 }
 
 .socials_row {
