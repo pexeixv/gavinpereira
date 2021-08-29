@@ -28,5 +28,11 @@
     },
     {
         "name": "After Effects"
+    },
+    {
+        "name": "jQuery"
+    },
+    {
+        "name": "GSAP"
     }
 ]
