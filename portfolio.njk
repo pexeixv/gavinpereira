@@ -10,38 +10,6 @@ layout: 'base.njk'
 {% include 'header.njk' %}
 
 
-
-
-
-    {# <section class="port port_outer outer">
-        <div class="port_inner inner">
-            <h2 class="port_title section_title">
-                Frontend Projects
-            </h2>
-            <p class="port_desc section_desc">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti provident eligendi nesciunt.
-            </p>
-            <div class="port_grid">
-                <div class="post">
-                    <img src="/img/post.png" class="post_image">
-                    <h4 class="post_title">Brand name</h4>
-                    <div class="post_tags">
-                        <div class="post_tag">HTML</div>
-                        <div class="post_tag">CSS</div>
-                    </div>
-                    <p class="post_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iusto sit
-                        dolorem maxime quisquam dolor enim accusamus tempora quaerat quo.</p>
-                </div>
-
-            </div>
-            <button class="btn btn-sec port_btn">More</button>
-        </div>
-    </section> #}
-
-
-
-
-
 {% for category in portfolio_categories %}
     <section class="port port_outer outer">
         <div class="inner port_inner ">
@@ -57,13 +25,6 @@ layout: 'base.njk'
 {% endfor %}
 
 
-
-
-
-
-
-
-
     <div class="banner_outer outer">
         <div class="banner banner_inner inner">
             <div class="banner_text">
@@ -74,11 +35,10 @@ layout: 'base.njk'
                     I might be offering it anyways.
                 </p>
             </div>
-            <div>
-                <a href="/contact" class="banner_btn btn btn-pri">Get in touch</a>
-            </div>
+            <a href="/contact" class="banner_btn btn btn-pri">Get in touch</a>
         </div>
     </div>
+
 
 {% include 'footer.njk' %}
 
