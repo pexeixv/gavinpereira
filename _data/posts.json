@@ -1,5 +1,14 @@
 [
     {
+        "name": "SALTŤ Kitchen",
+        "video": "saltt-kitchen.mp4?updatedAt=1630417926634",
+        "category": "motion",
+        "type": "Logo Reveal Animation",
+        "tags": [
+            "Logo Reveal Animation"
+        ]
+    },
+    {
         "name": "Gavin Pereira",
         "image": "gavin-pereira.gif",
         "category": "frontend",
