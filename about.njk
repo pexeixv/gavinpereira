@@ -29,7 +29,7 @@ layout: 'base.njk'
             </h2>
             <div class="know_grid">
                     {% for icon in knowledge %}
-                        <img class="know_img" src="/img/tech/{{ icon.name | lowerAndHyphen }}.svg" alt="{{icon.name}}"" title="{{icon.name}}">
+                        <img class="know_img" src="/img/tech/{{ icon | lowerAndHyphen }}.svg" alt="{{icon}}"" title="{{icon}}">
                     {% endfor %}                    
             </div>
         </div>
