@@ -63,6 +63,7 @@ var injectAll = posts => {
             grid.dataset.total = +total
             grid.dataset.printed = +total
         }
+        grid.previousElementSibling.style.display = 'none'
     }
 
     buttons = $$('.port_btn')

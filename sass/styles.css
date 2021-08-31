@@ -938,6 +938,39 @@ section .port_inner {
   margin-top: 3em;
 }
 
+.port_grid-skeleton .post_image, .port_grid-skeleton .post_title, .port_grid-skeleton .post_desc {
+  opacity: 0.3;
+  width: 100%;
+  background: var(--text-muted);
+  animation: skeleton-loading 700ms linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.port_grid-skeleton .post_image {
+  aspect-ratio: 1380/1080;
+}
+
+.port_grid-skeleton .post_title {
+  height: 25px;
+  width: 50%;
+}
+
+.port_grid-skeleton .post_desc {
+  height: 7px;
+}
+
+.port_grid-skeleton .post_desc:last-of-type {
+  width: 80%;
+}
+
 @media screen and (max-width: 1000px) {
   .port_grid {
     grid-template-columns: 1fr;

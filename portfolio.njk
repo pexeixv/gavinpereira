@@ -18,6 +18,17 @@ layout: 'base.njk'
                 <p class="port_desc section_desc">{{category.desc}}</p>
             {% endif %}
 
+            <div class="port_grid port_grid-skeleton">
+                {% for i in range(0,3) %}
+                    <div class="post">
+                        <div class="post_image"></div>
+                        <div class="post_title"></div>
+                        <div class="post_desc"></div>
+                        <div class="post_desc"></div>
+                    </div>
+                {% endfor %}
+            </div>
+
             <div class="port_grid"  id="grid-{{category.num}}"></div>
             <button class="btn btn-sec port_btn" id="btn-{{category.num}}">More</button>
         </div>
