@@ -3,6 +3,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy('./img')
     eleventyConfig.addPassthroughCopy('./js')
     eleventyConfig.addPassthroughCopy('./font')
+    eleventyConfig.addPassthroughCopy('./_redirects')
     eleventyConfig.addPassthroughCopy('./_data/posts.json')
     eleventyConfig.addFilter('lowerAndHyphen', string => string.toLowerCase().replace(/\s/g, "-"))
     return {
