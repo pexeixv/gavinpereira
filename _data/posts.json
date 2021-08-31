@@ -69,6 +69,15 @@
         ]
     },
     {
+        "name": "Yohan Fernandes",
+        "image": "yohan-fernandes.jpg",
+        "category": "graphic",
+        "type": "Album Art",
+        "tags": [
+            "Album Art"
+        ]
+    },
+    {
         "name": "Aaron Divino",
         "image": "aaron-divino.jpg",
         "category": "logo",
