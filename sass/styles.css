@@ -54,7 +54,7 @@ body {
   --button: #15847B;
   --button-hover: #0D544E;
   --button-text: #FFFFFF;
-  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow: rgba(0, 0, 0, 0.2);
   --scrollbar: #bed4d2;
 }
 
@@ -70,7 +70,7 @@ body {
   --button: #00C7B6;
   --button-hover: #5CEBDF;
   --button-text: #083564;
-  --shadow: rgba(255, 255, 255, 0.4);
+  --shadow: rgba(255, 255, 255, 0.1);
   --scrollbar: #29404a;
 }
 
@@ -323,7 +323,7 @@ div.header_theme {
   cursor: pointer;
   padding: 0.5em;
   border-radius: 100px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
   transition: all 0.18s ease-in-out;
 }
 
