@@ -44,3 +44,10 @@ lightbox.addEventListener('click', e => {
     lightbox.classList.remove('active')
 })
 
+
+
+window.addEventListener('keydown', e => {
+    if (e.keyCode == '27') {
+        lightbox.classList.remove('active')
+    }
+})
