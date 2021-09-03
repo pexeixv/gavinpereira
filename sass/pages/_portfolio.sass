@@ -12,6 +12,29 @@ section .port_inner
 .port_btn
     margin-top: 3em
 
+.post_image
+    cursor: pointer
+    width: 100%
+    max-width: 450px
+
+#lightbox
+    position: fixed
+    z-index: 6969
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba(black,0.8)
+    display: none
+#lightbox.active
+    display: flex
+    justify-content: center
+    align-items: center
+
+#lightbox img
+    max-width: 1000px
+    width: 90%
+    max-height: 80%
+
 .port_grid-skeleton
     .post_image,.post_title,.post_desc
         opacity: 0.3
