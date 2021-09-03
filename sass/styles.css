@@ -966,7 +966,8 @@ section .port_inner {
   align-items: center;
 }
 
-#lightbox img {
+#lightbox img,
+#lightbox video {
   max-width: 1000px;
   width: 90%;
   max-height: 80%;
