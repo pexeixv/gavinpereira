@@ -47,10 +47,10 @@ layout: 'base.njk'
                     <div class="post">
                         <div class="post_image_flex">
                             {% if posts[i].image %}
-                                <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].image}}" class="post_image">
+                                <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].image}}" class="post_image"  data-slug="{{posts[i].image}}" loading="lazy">
                             {% endif %}
                             {% if posts[i].video %}
-                                <video src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].video}}" autoplay muted loop class="post_image"></video>
+                                <video src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].video}}" autoplay muted loop class="post_image" data-slug="{{posts[i].video}}"  loading="lazy"></video>
                             {% endif %}
                         </div>
                         <h4 class="post_title">{{posts[i].name}}</h4>
@@ -111,3 +111,5 @@ layout: 'base.njk'
 
 
 <script src="js/script.js"></script>
+<script src="js/lightbox.js"></script>
+<script>lightboxListener()</script>

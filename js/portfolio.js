@@ -15,9 +15,9 @@ var postSnippet = post => {
     string += `<div class="post">
     <div class="post_image_flex">`
     if (post.image)
-        string += `<img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/${post.image}" class="post_image">`
+        string += `<img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450,pr-true,q-70/${post.image}" loading="lazy" class="post_image" data-slug="${post.image}">`
     if (post.video)
-        string += `<video src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/${post.video}" class="post_image" loop autoplay muted></video>`
+        string += `<video src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/${post.video}" class="post_image" loop autoplay muted data-slug="${post.video}"></video>`
 
     string += `</div>
     <h4 class="post_title">${post.name}</h4>
@@ -64,6 +64,7 @@ var injectAll = posts => {
             grid.dataset.printed = +total
         }
         grid.previousElementSibling.style.display = 'none'
+        lightboxListener()
     }
 
     buttons = $$('.port_btn')
@@ -72,6 +73,7 @@ var injectAll = posts => {
         button.click()
     })
 }
+
 
 
 
