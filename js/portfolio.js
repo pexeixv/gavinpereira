@@ -17,7 +17,9 @@ var postSnippet = post => {
     if (post.image)
         string += `<img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450,pr-true,q-70/${post.image}" loading="lazy" class="post_image" data-slug="${post.image}">`
     if (post.video)
-        string += `<video src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/${post.video}" class="post_image" loop autoplay muted data-slug="${post.video}"></video>`
+        string += `<video class="post_image" loop autoplay muted data-slug="${post.video}">
+                        <source  src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/${post.video}">
+                    </video>`
 
     string += `</div>
     <h4 class="post_title">${post.name}</h4>

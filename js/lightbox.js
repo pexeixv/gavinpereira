@@ -24,7 +24,10 @@ var lightboxListener = () => {
             if (videoTag) {
                 var img = document.createElement('video')
                 img.setAttribute('controls', 'true')
-                img.src = `https://ik.imagekit.io/gavin/gavinpereira/tr:w-800/${slug}`
+                img.setAttribute('autoplay', 'true')
+                img.setAttribute('loop', 'true')
+                img.dataset.setup = `{}`
+                img.innerHTML = `<source src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-800/${slug}">`
             }
             lightbox.innerHTML = ''
             lightbox.appendChild(img)
