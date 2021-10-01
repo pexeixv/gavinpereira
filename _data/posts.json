@@ -1,5 +1,14 @@
 [
     {
+        "name": "DoDo Entertainment",
+        "video": "dodo-entertainment.mp4?updatedAt=1633066370293",
+        "category": "motion",
+        "type": "Event Flyer",
+        "tags": [
+            "Event Flyer"
+        ]
+    },
+    {
         "name": "SALTŤ Kitchen",
         "video": "saltt-kitchen.mp4?updatedAt=1630417926634",
         "category": "motion",
@@ -27,9 +36,9 @@
         "name": "SALTŤ Kitchen",
         "image": "saltt-kitchen.jpg?updatedAt=1629984412878",
         "category": "graphic",
-        "type": "Social Media Flyer",
+        "type": "Event Flyer",
         "tags": [
-            "Social Media Flyer"
+            "Event Flyer"
         ]
     },
     {
