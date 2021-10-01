@@ -10,6 +10,15 @@
     },
     {
         "name": "SALTŤ Kitchen",
+        "video": "saturday-heist.mp4",
+        "category": "motion",
+        "type": "Event Flyer",
+        "tags": [
+            "Event Flyer"
+        ]
+    },
+    {
+        "name": "SALTŤ Kitchen",
         "video": "saltt-kitchen.mp4?updatedAt=1630417926634",
         "category": "motion",
         "type": "Logo Reveal Animation",
