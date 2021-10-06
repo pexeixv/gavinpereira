@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "prestart": "rm -rf _site",
+    "start": "npx eleventy --serve"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "eleventy-plugin-pwa": "^1.0.8"
   }
 }
