@@ -1,6 +1,15 @@
 [
     {
         "name": "DoDo Entertainment",
+        "image": "dodo-entertainment.jpg",
+        "category": "logo",
+        "type": "Identity Design",
+        "tags": [
+            "Identity Design"
+        ]
+    },
+    {
+        "name": "DoDo Entertainment",
         "video": "dodo-entertainment.mp4?updatedAt=1633066370293",
         "category": "motion",
         "type": "Event Flyer",
