@@ -130,6 +130,18 @@ body.dark {
   color: #f39c12;
 }
 
+.logo-lite {
+  display: none;
+}
+
+.darkmode .logo-lite {
+  display: unset;
+}
+
+.darkmode .logo-dark {
+  display: none;
+}
+
 .inner {
   width: 90%;
   max-width: 1100px;
@@ -156,10 +168,6 @@ h2.section_title {
 
 .logo {
   transition: all 1000ms;
-}
-
-.darkmode .logo {
-  filter: invert(1);
 }
 
 .hide-blue {
