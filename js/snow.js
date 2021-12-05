@@ -19,7 +19,7 @@ var snowSpeed = 0.75;
 var snowMinSize = 8;
 
 // Maximum Flake Size
-var snowMaxSize = 24;
+var snowMaxSize = 15;
 
 // Refresh Rate (in milliseconds)
 var snowRefresh = 50;
@@ -57,7 +57,7 @@ function initSnow() {
         snow[i] = document.getElementById("flake" + i);
         snow[i].style.fontFamily = "inherit";
         snow[i].size = randomise(snowSize) + snowMinSize;
-        snow[i].style.fontSize = snow[i].size + "px";
+        snow[i].style.fontSize = +snow[i].size / 20 + "rem";
         snow[i].style.color = snowColor[randomise(snowColor.length)];
         snow[i].style.zIndex = 1000;
         snow[i].sink = snowSpeed * snow[i].size / 5;
