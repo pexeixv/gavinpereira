@@ -1026,9 +1026,37 @@ section .port_inner {
   width: 80%;
 }
 
+.post_image_flex {
+  overflow: hidden;
+  position: relative;
+}
+
+.post_enlarge {
+  cursor: pointer;
+  pointer-events: none;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  transition: all 300ms ease-in-out;
+  transform: translateX(400%);
+}
+
+.post_enlarge i {
+  cursor: pointer;
+  pointer-events: none;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
+}
+
+.post_image_flex:hover .post_enlarge {
+  transform: translateX(0);
+}
+
 @media screen and (max-width: 1000px) {
   .port_grid {
     grid-template-columns: 1fr;
+  }
+  .post_enlarge {
+    transform: translateX(0);
   }
 }
 

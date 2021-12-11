@@ -53,9 +53,13 @@ layout: 'base.njk'
                             {% if posts[i].video %}
                                 <video src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].video}}" autoplay muted loop class="post_image" data-slug="{{posts[i].video}}"  loading="lazy"></video>
                             {% endif %}
+                            <div class="post_enlarge"><i class="fas fa-expand-arrows-alt"></i></div>
                         </div>
                         <h4 class="post_title">{{posts[i].name}}</h4>
                         <p class="post_desc">{{posts[i].type}}</p>
+                        {% if posts[i].link %}
+                            <a class="post_link" href="//{{posts[i].link}}" target="_blank">{{posts[i].link}}</a>
+                        {% endif %}
                     </div>
                 {% endfor %}
 

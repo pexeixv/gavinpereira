@@ -20,7 +20,7 @@ var postSnippet = post => {
         string += `<video class="post_image" loop autoplay muted data-slug="${post.video}">
                         <source  src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/${post.video}">
                     </video>`
-
+    string += `<div class="post_enlarge"><i class="fas fa-expand-arrows-alt"></i></div>`
     string += `</div>
     <h4 class="post_title">${post.name}</h4>
     <div class="post_tags">`
