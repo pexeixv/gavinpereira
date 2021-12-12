@@ -991,6 +991,15 @@ section .port_inner {
   max-width: 1000px;
   width: 90%;
   max-height: 80%;
+  z-index: 4;
+}
+
+.lightbox_load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .port_grid-skeleton .post_image, .port_grid-skeleton .post_title, .port_grid-skeleton .post_desc {

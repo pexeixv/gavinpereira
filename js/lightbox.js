@@ -15,6 +15,7 @@ var lightboxListener = () => {
 
             if (imgTag) {
                 var img = document.createElement('img')
+                img.classList.add('lightbox_image')
                 img.src = image.src
                 img.srcset = ` https://ik.imagekit.io/gavin/gavinpereira/tr:w-450,pr-true/${slug} 500w,
                 https://ik.imagekit.io/gavin/gavinpereira/tr:w-500,pr-true/${slug} 700w,
@@ -23,13 +24,14 @@ var lightboxListener = () => {
             }
             if (videoTag) {
                 var img = document.createElement('video')
+                img.classList.add('lightbox_image')
                 img.setAttribute('controls', 'true')
                 img.setAttribute('autoplay', 'true')
                 img.setAttribute('loop', 'true')
                 img.dataset.setup = `{}`
                 img.innerHTML = `<source src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-800/${slug}">`
             }
-            lightbox.innerHTML = ''
+            lightbox.innerHTML = '<div class="lightbox_load"><i class="fas fa-spinner fa-pulse fa-3x"></i></div>'
             lightbox.appendChild(img)
         })
     })
