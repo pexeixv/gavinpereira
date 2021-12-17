@@ -29,9 +29,10 @@ layout: 'base.njk'
             </h2>
             <div class="know_grid">
                     {% for icon in knowledge %}
-                        <img class="know_img" src="/img/tech/{{ icon | lowerAndHyphen }}.svg" alt="{{icon}}"" title="{{icon}}">
-                    {% endfor %}                    
+                        <img class="know_img" src="/img/tech/{{ icon | lowerAndHyphen }}.svg" alt="{{icon}}" data-name="{{icon}}">
+                    {% endfor %}
             </div>
+            <span class="know_name">&nbsp;</span>
         </div>
     </section>
 
@@ -58,3 +59,4 @@ layout: 'base.njk'
 
 {% include 'footer.njk' %}
 <script src="/js/script.js"></script>
+<script src="/js/about.js"></script>
