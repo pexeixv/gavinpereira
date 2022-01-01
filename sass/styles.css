@@ -19,6 +19,11 @@
   transition: color 100ms, background 300ms;
 }
 
+*::selection {
+  color: var(--background-secondary);
+  background: var(--subheading);
+}
+
 html {
   scroll-behavior: smooth;
 }
