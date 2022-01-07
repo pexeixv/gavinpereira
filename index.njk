@@ -9,20 +9,29 @@ layout: 'base.njk'
 
 
 {% include 'header.njk' %}
+<div class="header_cover" style="background: var(--background)"></div>
 
 
     <div class="main_outer outer">
         <main class="main main_inner inner">
             <div class="main_left">
-                <h1 class="main_title">
-                    I craft beautiful web experiences.
-                </h1>
-                <p class="main_desc">
-                    I'm Gavin Pereira, a graphic designer and frontend developer from Goa.
-                </p>
-                <div class="main_ctas">
-                    <a href="/portfolio" class="btn btn-pri">View work</a>
-                    <a href="/contact" class="btn btn-sec">Get in touch</a>                    
+                <a class="main_scroll_anchor">
+                    <div class="main_scroll">
+                        {% include "img/icons/scroll-shape.svg" %}
+                        {% include "img/icons/scroll-arrow.svg" %}
+                    </div>
+                </a>
+                <div class="main_content">
+                    <h1 class="main_title">
+                        I craft beautiful web experiences.
+                    </h1>
+                    <p class="main_desc">
+                        I'm Gavin Pereira, a graphic designer and frontend developer from Goa.
+                    </p>
+                    <div class="main_ctas">
+                        <a href="/portfolio" class="btn btn-pri">View work</a>
+                        <a href="/contact" class="btn btn-sec">Get in touch</a>
+                    </div>
                 </div>
             </div>
             <div class="main_right">
@@ -34,7 +43,7 @@ layout: 'base.njk'
     </div>
 
 
-    <section class="recent_outer outer">
+    <section class="recent_outer outer" id="scroll">
         <div class="recent recent_inner inner">
             <h2 class="recent_title section_title">
                 Check out my recent work
@@ -117,5 +126,10 @@ layout: 'base.njk'
 
 <script src="/js/script.js"></script>
 <script src="/js/lightbox.js"></script>
+<script>
+    var scrollBtn = $('.main_scroll_anchor')
+    var nextSection = $('#scroll')
+    scrollBtn.addEventListener('click',()=>nextSection.scrollIntoView())
+</script>
 <script>lightboxListener()</script>
 

@@ -350,6 +350,11 @@ div.header_theme {
   font-size: 1.1rem;
 }
 
+.header_cover {
+  min-height: 70px;
+  background: var(--background-secondary);
+}
+
 .header_theme,
 .header_theme_icon,
 .header_theme::selection,
@@ -669,13 +674,21 @@ section.main_outer {
 
 .main {
   max-width: unset;
-  min-height: calc( 100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: flex-end;
   overflow: visible;
   width: 98vw;
   grid-gap: 5vw;
+  position: relative;
+}
+
+.main {
+  min-height: calc( 100vh - 85px);
+}
+
+.main_left, .main_right {
+  height: calc( 100vh - 85px);
 }
 
 .main_title {
@@ -683,7 +696,6 @@ section.main_outer {
 }
 
 .main_right {
-  height: calc( 100vh - 70px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -712,12 +724,29 @@ section.main_outer {
   fill: var(--background-secondary);
 }
 
+.scroll_shape path {
+  cursor: pointer;
+  fill: var(--background-secondary);
+  transition: 300ms;
+}
+
+.scroll_arrow path {
+  fill: var(--subheading);
+  transition: 300ms;
+}
+
 .main_hero {
   max-height: 80%;
   z-index: 1;
 }
 
 .main_left {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.main_content {
   z-index: 2;
   width: 550px;
   display: flex;
@@ -725,6 +754,7 @@ section.main_outer {
   justify-content: center;
   grid-gap: 1em;
   align-items: flex-start;
+  position: relative;
 }
 
 .main_title {
@@ -744,6 +774,32 @@ section.main_outer {
   display: flex;
   align-items: center;
   grid-gap: 1em;
+}
+
+.main_scroll_anchor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.main_scroll {
+  position: relative;
+}
+
+.main_scroll:hover .scroll_arrow {
+  transform: translate(-50%, 90%);
+}
+
+.scroll_arrow {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: 300ms;
+}
+
+.scroll_shape {
+  transform: translateY(5px);
 }
 
 @media screen and (max-width: 1250px) {
@@ -795,6 +851,9 @@ section.main_outer {
     height: 100%;
     width: 100%;
     bottom: -20%;
+  }
+  .main_scroll {
+    display: none;
   }
 }
 
