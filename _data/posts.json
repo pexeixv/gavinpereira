@@ -1,5 +1,14 @@
 [
 	{
+        "name": "ADR Pro System",
+        "image": "adr-pro-system-hd25.jpg?&updatedAt=1642339478994",
+        "category": "graphic",
+        "type": "Product Banner",
+        "tags": [
+            "Product Banner"
+        ]
+    },
+    	{
         "name": "Kelly Fizardo",
         "image": "kelly-fizardo-temp.jpg",
         "category": "frontend",
