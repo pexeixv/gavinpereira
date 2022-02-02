@@ -1,4 +1,18 @@
-[
+[	
+	{
+        "name": "TAB Nation",
+        "image": "tab-nation.jpg",
+        "category": "frontend",
+        "type": "JAMStack Development",
+        "tags": [
+	    "TailwindCSS",
+            "11ty",
+            "Git",
+            "Contentful",
+        ],
+        "desc": "Redesigned website for TAB Nation Youtube channel",
+        "link": "tabnationcoding.com"
+    },
 	{
         "name": "ADR Pro System",
         "image": "adr-pro-system-hd25.jpg?&updatedAt=1642339478994",
