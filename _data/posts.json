@@ -3,7 +3,7 @@
         "name": "TAB Nation",
         "image": "tab-nation.jpg",
         "category": "frontend",
-        "type": "JAMStack Development",
+        "type": "JAMstack Web Development",
         "tags": [
 	    "TailwindCSS",
             "11ty",
