@@ -31,7 +31,7 @@ var postSnippet = post => {
     if (post.desc)
         string += `<p class="post_desc">${post.desc}</p>`
     if (post.link)
-        string += `<a class="post_link" href="//${post.link}" target="_blank">${post.link}</a>`
+        string += `<a class="post_link" href="http://${post.link}" target="_blank">${post.link}</a>`
     string += `</div>`
     return string
 }
