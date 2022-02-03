@@ -67,7 +67,7 @@ layout: 'base.njk'
                         <h4 class="post_title">{{posts[i].name}}</h4>
                         <p class="post_desc">{{posts[i].type}}</p>
                         {% if posts[i].link %}
-                            <a class="post_link" href="//{{posts[i].link}}" target="_blank">{{posts[i].link}}</a>
+                            <a class="post_link" href="http://{{posts[i].link}}" target="_blank">{{posts[i].link}}</a>
                         {% endif %}
                     </div>
                 {% endfor %}
