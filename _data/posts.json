@@ -37,6 +37,18 @@
         "desc": "Portfolio website for a product photographer. Still under construction. 🚧",
         "link": "kf.gavinpereira.in"
     },
+	{
+        "name": "Chowgule College",
+        "image": "necms.jpg",
+        "category": "frontend",
+        "type": "Frontend Development",
+        "tags": [
+            "HTML",
+            "Bootstrap"
+        ],
+        "desc": "Handled frontend development for Chowgule College's Non-Evaluative Credits Management System.",
+        "link": "chowgules.ac.in"
+    },
     {
         "name": "DoDo Entertainment",
         "image": "dodo-entertainment.jpg",
