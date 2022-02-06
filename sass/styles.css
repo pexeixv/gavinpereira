@@ -1370,6 +1370,48 @@ section .port_inner {
   fill: var(--background-secondary);
 }
 
+section .prose_inner {
+  display: block;
+  padding: 4rem 0;
+  max-width: 700px;
+}
+
+@media screen and (max-width: 1024px) {
+  section .prose_inner {
+    padding: 0rem 0 4rem;
+  }
+}
+
+.prose * {
+  padding: 0 0 0.5em;
+}
+
+.prose h1 {
+  padding: 1.5em 0 0.2em;
+  color: var(--subheading);
+  font-size: 2.5rem;
+}
+
+.prose ul {
+  padding-left: 2rem;
+}
+
+.prose h2 {
+  font-size: 1.8rem;
+  padding: 1.2em 0 0.5em;
+}
+
+.prose a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  transition: all 300ms;
+}
+
+.prose a:hover {
+  color: var(--primary);
+}
+
 body {
   background: var(--background);
   color: var(--text);
