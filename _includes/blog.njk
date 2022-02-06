@@ -16,3 +16,8 @@ title: Uses
 
 {% include 'footer.njk' %}
 <script src="/js/script.js"></script>
+<script>
+    var prose = document.querySelector('.prose')
+    var anchors = prose.querySelectorAll('a')
+    anchors.forEach(a=>{a.target='_blank'})
+</script>
