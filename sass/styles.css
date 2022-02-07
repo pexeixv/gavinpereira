@@ -832,6 +832,12 @@ section.main_outer {
 
 @media screen and (max-width: 1000px) {
   .main {
+    min-height: calc( 80vh - 85px);
+  }
+  .main_left, .main_right {
+    height: calc( 80vh - 85px);
+  }
+  .main {
     width: 90%;
     flex-direction: column;
   }
@@ -846,7 +852,7 @@ section.main_outer {
     margin: 0 auto;
     flex: 1;
     height: 40vh;
-    width: 80%;
+    width: 100%;
     justify-content: flex-end;
   }
   .main_shapes {

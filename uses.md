@@ -1,5 +1,6 @@
 ---
 layout: blog.njk
+title: Uses
 ---
 
 # Gavin Pereira uses
