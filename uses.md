@@ -31,6 +31,7 @@ Last updated: January 2022
 - [Adobe Photoshop](https://www.adobe.com/in/products/photoshop.html) for all photo editing and some graphic design work.
 - [Advanced Renamer](https://www.advancedrenamer.com/) 'cus I won't want to do it manually.
 - [AutoHotKey](https://www.autohotkey.com/) for automating repetitive stuff.
+- [Bitwarden](https://bitwarden.com/) password manager.
 - [Brave Browser](https://brave.com/gav030) for the ad-blocking and BAT tokens.
 - [ESET Nod32](https://www.eset.com/int/home/antivirus/download/): Lightweight antivirus.
 - [Everything search](https://www.voidtools.com/support/everything/) 'cus Windows can never get its search in place.
