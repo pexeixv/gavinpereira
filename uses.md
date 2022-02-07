@@ -57,4 +57,4 @@ Last updated: January 2022
 - [Redmi Note 7](https://www.mi.com/in/redmi-note-7/).
 - [Realme Buds 2](https://buy.realme.com/in/goods/130) and [boAt 114](https://www.boat-lifestyle.com/products/airdopes-141).
 
-Check out [uses.tech](https://uses.tech/) and find out what other devs [/]()use.
+Check out [uses.tech](https://uses.tech/) and find out what other devs /use.
