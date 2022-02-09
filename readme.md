@@ -1,10 +1,17 @@
-# <p align="center"><img width="400" src="./img/wordmark.svg"></p>
+# <img width="600" src="./img/wordmark.svg">
 
-<p align="center">
-    <img src="./img/preview.gif">
-</p>
+## Preview
 
-<p align="center">
-    Total time<br>
-    <img src="https://wakatime.com/badge/github/pexeixv/gavinpereira.svg">
-</p>
+<img src="img/preview.gif">
+
+## Total time spent
+
+<img src="https://wakatime.com/badge/github/pexeixv/gavinpereira.svg">
+
+## Tools used
+
+- Nunjucks
+- Sass
+- Javascript
+- Eleventy.js
+- Git
