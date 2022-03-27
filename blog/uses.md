@@ -1,6 +1,8 @@
 ---
 layout: blog.njk
 title: Uses
+date: 2022-01-31
+excerpt: Stuff that Gavin Pereira uses
 ---
 
 # Gavin Pereira uses

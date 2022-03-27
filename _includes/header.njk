@@ -1,52 +1,41 @@
-    <div class="header_outer outer">
-        <header class="header header_inner inner">
-
-
-
-            {% if title!='Home'%}
-                <a href="/">
-            {% endif %} 
-
-            {% if title=='Home'%}
-                <a href="#">
+<div class="header_outer outer">
+    <header class="header header_inner inner">
+        {% if title!='Home' %}
+            <a href="/">
             {% endif %}
-
+            {% if title=='Home' %}
+                <a href="#">
+                {% endif %}
                 <div class="header_logo">
                     <img src="/img/logo.svg" alt="Gavin Pereira logo" class="header_logo_icon logo logo-dark">
-                    <img src="/img/logo-white.svg" alt="Gavin Pereira logo" class="header_logo_icon logo logo-lite">
-                    <span class="header_logo_text">Gavin Pereira</span>
-                </div>
-            </a>
-
-            <nav class="nav header_nav ">
-                    {{  '<a href="#" class="nav_link nav_link-active">Home</a>'|safe 
+                        <img src="/img/logo-white.svg" alt="Gavin Pereira logo" class="header_logo_icon logo logo-lite">
+                            <span class="header_logo_text">Gavin Pereira</span>
+                        </div>
+                    </a>
+                    <nav class="nav header_nav ">
+                        {{ '<a href="#" class="nav_link nav_link-active">Home</a>'|safe 
                             if title=='Home'
                                 else '<a href="/" class="nav_link">Home</a>'|safe }}
-
-                    {{ '<a href="#" class="nav_link nav_link-active">About</a>'|safe
+                        {{ '<a href="#" class="nav_link nav_link-active">About</a>'|safe
                             if title=='About'
                                 else '<a href="/about" class="nav_link">About</a>'|safe }}
-
-                    {{ '<a href="#" class="nav_link nav_link-active">Portfolio</a>'|safe
+                        {{ '<a href="#" class="nav_link nav_link-active">Portfolio</a>'|safe
                             if title=='Portfolio'
                                 else '<a href="/portfolio" class="nav_link">Portfolio</a>'|safe }}
-                    
-                    {{ '<a href="#" class="nav_link nav_link-active">Contact</a>'|safe
+                        {{ '<a href="#" class="nav_link nav_link-active">Blog</a>'|safe
+                            if title=='Blog'
+                                else '<a href="/blog" class="nav_link">Blog</a>'|safe }}
+                        {{ '<a href="#" class="nav_link nav_link-active">Contact</a>'|safe
                             if title=='Contact'
                                 else '<a href="/contact" class="nav_link">Contact</a>'|safe }}
-
-            </nav>
-            <div class="header_buttons">
-
-                <div class="header_theme hide-blue">
-                </div>
-
-                <div class="header_burger hide-blue">
-                    <span class="burger_bar burger_bar1"></span>
-                    <span class="burger_bar burger_bar2"></span>
-                    <span class="burger_bar burger_bar3"></span>
-                </div>
+                    </nav>
+                    <div class="header_buttons">
+                        <div class="header_theme hide-blue"></div>
+                        <div class="header_burger hide-blue">
+                            <span class="burger_bar burger_bar1"></span>
+                            <span class="burger_bar burger_bar2"></span>
+                            <span class="burger_bar burger_bar3"></span>
+                        </div>
+                    </div>
+                </header>
             </div>
-        </header>
-    </div>
-

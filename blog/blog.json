@@ -1,0 +1,5 @@
+{
+    "layout": "blog.njk",
+    "tags": "blog",
+    "excerpt": "Default excerpt"
+}

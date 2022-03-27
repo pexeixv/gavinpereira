@@ -1,0 +1,48 @@
+---
+title: Blog
+layout: 'base.njk'
+
+---
+
+
+
+{% include 'header.njk' %}
+<div class="header_cover"></div>
+
+
+    <section class="blog_outer outer">
+        <div class="blog blog_inner inner">
+            <h2 class="section_title blog_title">
+                Blog
+            </h2>
+
+            <div class="blog_grid">
+
+                {% for blog in collections.blog %}
+
+                    <div class="blog_card">
+                        <h3 class="blog_name">
+                            {{blog.data.title}}
+                        </h3>
+                        <span class="blog_date">
+                            {{blog.data.date | dateFilter}}
+                        </span>
+                        <p class="blog_excerpt">
+                            {{ blog.data.excerpt }}
+                        </p>
+                        <a href="{{blog.url}}" class="blog_link">Continue reading</a>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+
+        </div>
+    </section>
+
+{% include 'footer.njk' %}
+
+
+<script src="/js/script.js"></script>
+
