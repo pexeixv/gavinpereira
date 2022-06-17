@@ -7,6 +7,8 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy('./_headers')
     eleventyConfig.addPassthroughCopy('./_data/posts.json')
     eleventyConfig.addPassthroughCopy('./sitemap.xml')
+    eleventyConfig.addPassthroughCopy('./gavin-pereira-resume.pdf')
+    eleventyConfig.addPassthroughCopy('./robots.txt')
     eleventyConfig.addFilter('lowerAndHyphen', string => string.toLowerCase().replace(/\s/g, "-"))
     return {
         dir: {
