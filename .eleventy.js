@@ -1,19 +1,15 @@
-module.exports = eleventyConfig => {
-    eleventyConfig.addPassthroughCopy('./sass/styles.css')
-    eleventyConfig.addPassthroughCopy('./img')
-    eleventyConfig.addPassthroughCopy('./js')
-    eleventyConfig.addPassthroughCopy('./font')
-    eleventyConfig.addPassthroughCopy('./_redirects')
-    eleventyConfig.addPassthroughCopy('./_headers')
-    eleventyConfig.addPassthroughCopy('./_data/posts.json')
-    eleventyConfig.addPassthroughCopy('./sitemap.xml')
-    eleventyConfig.addPassthroughCopy('./gavin-pereira-resume.pdf')
-    eleventyConfig.addPassthroughCopy('./robots.txt')
-    eleventyConfig.addFilter('lowerAndHyphen', string => string.toLowerCase().replace(/\s/g, "-"))
+module.exports = (eleventyConfig) => {
+    eleventyConfig.addPassthroughCopy("./sass/styles.css")
+    eleventyConfig.addPassthroughCopy("./img")
+    eleventyConfig.addPassthroughCopy("./js")
+    eleventyConfig.addPassthroughCopy("./font")
+    eleventyConfig.addPassthroughCopy("./_data/posts.json")
+    eleventyConfig.addPassthroughCopy({ "./public/*": "/" })
+    eleventyConfig.addFilter("lowerAndHyphen", string => string.toLowerCase().replace(/\s/g, "-"))
     return {
         dir: {
-            input: '.',
-            output: '_site'
+            input: ".",
+            output: "_site"
         }
     }
 }
