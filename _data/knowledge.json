@@ -2,7 +2,6 @@
     "HTML5",
     "CSS3",
     "JavaScript",
-    "Nunjucks",
     "Sass",
     "Tailwind CSS",
     "11ty",
@@ -11,8 +10,9 @@
     "Photoshop",
     "After Effects",
     "Figma",
-    "jQuery",
     "GSAP",
     "Python",
-	"Contentful CMS"
+    "Contentful CMS",
+    "Next JS",
+    "Sanity CMS"
 ]

@@ -4,43 +4,35 @@ layout: 'base.njk'
 
 ---
 
-
-
 {% include 'header.njk' %}
 <div class="header_cover"></div>
-
-
-
-
-    <section class="about_outer outer">
-        <div class="about about_inner inner">
-            <h2 class="section_title about_title">
-                About me
-            </h2>
-            <p class="about_desc">
-                    I'm a 20-year-old graphic designer from Goa, specialized in minimalist design. I have been designing since the time I got my first laptop in 2017. Apart from graphic design, I do motion graphics and digital art. I design and develop websites. I enjoy working with colors, type, illustrations, and everything in between. I have a clear understanding of typography, color theory, layout, and design fundamentals. I love learning new things each day. Get in touch, let's get working!
-            </p>
-        </div>
-    </section>
-
-    <section class="know_outer outer">
-        <div class="know know_inner inner">
-            <h2 class="know_title section_title">
-                Knowledge
-            </h2>
-            <div class="know_grid">
-                    {% for icon in knowledge %}
-                        <img class="know_img" src="/img/tech/{{ icon | lowerAndHyphen }}.svg" alt="{{icon}}" data-name="{{icon}}">
-                    {% endfor %}
+<section class="about_outer outer">
+    <div class="about about_inner inner">
+        <h2 class="section_title about_title">
+            About me
+        </h2>
+        <p class="about_desc">
+            I'm a 20-year-old graphic designer from Goa, specialized in minimalist design. I have been designing since the time I
+            got my first laptop in 2017. Apart from graphic design, I do motion graphics and digital art. I design and develop
+            websites. I enjoy working with colors, type, illustrations, and everything in between. I have a clear understanding of
+            typography, color theory, layout, and design fundamentals. I love learning new things each day. Get in touch, let's get
+            working!
+        </p>
+    </div>
+</section>
+<section class="know_outer outer">
+    <div class="know know_inner inner">
+        <h2 class="know_title section_title">
+            Tech Knowledge
+        </h2>
+        <div class="know_grid">
+            {% for icon in knowledge %}
+                <img class="know_img" src="/img/tech/{{ icon | lowerAndHyphen }}.svg" alt="{{ icon }}" data-name="{{ icon }}">
+                {% endfor %}
             </div>
             <span class="know_name">&nbsp;</span>
         </div>
     </section>
-
-
-
-
-    
     <div class="banner_outer outer">
         <div class="banner banner_inner inner">
             <div class="banner_text">
@@ -51,13 +43,9 @@ layout: 'base.njk'
                     I always look forward to learning new technologies.
                 </p>
             </div>
-                <a href="/contact" class="banner_btn btn btn-pri">Get in touch</a>
+            <a href="/contact" class="banner_btn btn btn-pri">Get in touch</a>
         </div>
     </div>
-
-
-
-
-{% include 'footer.njk' %}
-<script src="/js/script.js"></script>
-<script src="/js/about.js"></script>
+    {% include 'footer.njk' %}
+    <script src="/js/script.js"></script>
+    <script src="/js/about.js"></script>
