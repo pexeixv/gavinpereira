@@ -1,0 +1,28 @@
+section .co_inner
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 50px
+    padding-left: 20px
+    padding-right: 20px
+    width: fit-content
+    margin: 0 auto
+    padding-bottom: 0
+
+@media screen and ( max-width: 500px )
+    section .co_inner
+        grid-template-columns: 1fr
+
+.co_image
+    filter: grayscale(1)
+
+.co_item
+    max-width: 300px
+    width: fit-content
+    display: flex
+    flex-direction: column
+    gap: 0.5em
+
+.co_date
+    font-size: 0.85rem
+    font-weight: 300
+    font-style: italic

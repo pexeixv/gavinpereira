@@ -1,0 +1,14 @@
+[
+    {
+        "company": "Zimetrics Technologies",
+        "position": "Trainee Software Engineer 1",
+        "img": "zimetrics.png",
+        "duration": "August 2022 - present"
+    },
+    {
+        "company": "Jain University",
+        "position": "MCA Fullstack Development",
+        "img": "jain.png",
+        "duration": "September 2022 - present"
+    }
+]

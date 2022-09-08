@@ -1,4 +1,9 @@
 {
-        "scripts":{
+        "scripts": {
                 "build": "eleventy",
-                "dev": "eleventy --serve"                                                                                       } ,                                                                                                                "devDependencies": {                                                                                                      "@11ty/eleventy": "^0.12.1"                                                                                           }                                                                                                                     }    
+                "dev": "eleventy --serve"
+        },
+        "devDependencies": {
+                "@11ty/eleventy": "^0.12.1"
+        }
+}
