@@ -108,6 +108,20 @@ layout: 'base.njk'
             <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse suscipit minima sequi exercitationem facere aspernatur. -->
         </p>
 
+        {% for test in featured_testimonials %}
+        <div class="test test-featured">
+            <div class="test_tint">
+                <img src="{{test.image}}" alt="{{test.name}}" title="{{test.name}}" class="test_image">
+            </div>
+            <div class="test_text">
+                <q class="test_quote">{{test.quote}}</q>
+                <h4 class="test_name">{{test.name}}</h4>
+                <h5 class="test_desg">{{test.desgn}}</h5>
+                <span class="test_source">Source: <a href="//{{test.source}}" target="_blank">{{test.source}}</a></span>
+            </div>
+            <img src="{{test.logo}}" alt="{{test.desgn}}" class="test_logo">
+        </div>
+        {% endfor %}
         <div class="tests_grid">
 
             {% for test in testimonials %}
@@ -127,20 +141,17 @@ layout: 'base.njk'
 
 
 
-<section class="clients_outer outer">
-    <div class="clients clients_inner inner">
-        <h2 class="clients_title section_title">
-            I have worked with
-        </h2>
-        <div class="clients_grid">
-            {% for client in clients %}
-            <img class="client_logo" src="{{client.image}}" alt="{{client.name}}" title="{{client.name}}">
-            {% endfor %}
-            <div class="piracy"></div>
+<div class="banner_outer outer">
+    <div class="banner banner_inner inner">
+        <div class="banner_text">
+            <h2 class="banner_title">
+                Have some work for me?
+            </h2>
+            <p class="banner_desc"></p>
         </div>
+        <a href="/contact" class="banner_btn btn btn-pri">Get in touch</a>
     </div>
-</section>
-
+</div>
 
 {% include 'footer.njk' %}
 

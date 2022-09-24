@@ -7,18 +7,22 @@
 .test_image
     border-radius: 100px
     height: 150px
+    width: 150px
+    max-width: unset
+    max-height: unset
 
 .test
     display: flex
     flex-direction: column
     align-items: center
     max-width: 1000px
+    position: relative
 .test_tint
     position: relative
     border-radius: 100vw
-    overflow: hidden
     width: 150px
     height: 150px
+
 .test_tint::after
     content: ''
     position: absolute
@@ -29,6 +33,7 @@
     z-index: 5
     width: 150px
     height: 150px
+    border-radius: 100vw
 
 .test_quote
     padding: 2em 1.5em 1em
@@ -44,6 +49,53 @@
     font-weight: 400
     font-style: italic
 
+.test_source a
+    color: var(--button)
+    display: inline-block
+
+.test_logo
+    position: absolute
+    opacity: 0.2
+    bottom: 0
+    right: 0
+    max-height: 120px
+    padding: 1em
+
+.test-featured
+    grid-column: 1 / span 3
+    flex-direction: row
+    max-width: 1000px
+    justify-content: space-between
+    gap: 2em
+    margin: 5em 0 0
+    padding: 3em
+    border-radius: 1em
+    // box-shadow: 0px 0px 20px var(--primary-muted)
+    background: var(--background)
+
+    .test_quote
+        font-size: 1.1rem
+        padding: 0
+
+    .test_name
+        margin-top: 1.2em
+    .test_source
+        margin-top: 1.2em
+        display: flex
+        gap: 0.1em
+
+    .test_image
+        height: 200px
+        width: 200px
+
+    .test_tint
+        height: 200px
+        width: 200px
+
+    .test_tint::after
+        height: 200px
+        width: 200px
+
 @media screen and ( max-width: 1000px )
     .tests_grid
         grid-template-columns: 1fr
@@ -52,6 +104,15 @@
         max-width: 370px
     .test_quote
         font-size: 0.85rem
+
+    .test-featured
+        flex-direction: column
+
+    .test_source
+        flex-direction: column
+
+    .test_logo
+        display: none
 
 @media screen and ( max-width: 550px )
     .tests_grid
