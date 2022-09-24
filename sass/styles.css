@@ -1013,6 +1013,7 @@ section .co_inner {
   width: fit-content;
   margin: 0 auto;
   padding-bottom: 0;
+  align-items: start;
 }
 
 @media screen and (max-width: 500px) {
