@@ -1,0 +1,14 @@
+[
+    {
+        "company": "Zimetrics Technologies",
+        "position": "Trainee Software Engineer 1",
+        "img": "zimetrics.png",
+        "duration": "August 2022 - present"
+    },
+    {
+        "company": "Parvatibai Chowgule College",
+        "position": "BSc Computer Science",
+        "img": "chowgule.png",
+        "duration": "July 2019 - September 2022"
+    }
+]

@@ -12,113 +12,134 @@ layout: 'base.njk'
 <div class="header_cover" style="background: var(--background)"></div>
 
 
-    <div class="main_outer outer">
-        <main class="main main_inner inner">
-            <div class="main_left">
-                <a class="main_scroll_anchor">
-                    <div class="main_scroll">
-                        {% include "img/icons/scroll-shape.svg" %}
-                        {% include "img/icons/scroll-arrow.svg" %}
-                    </div>
-                </a>
-                <div class="main_content">
-                    <h1 class="main_title">
-                        I craft beautiful web experiences.
-                    </h1>
-                    <p class="main_desc">
-                        I'm Gavin Pereira, a graphic designer and frontend developer from Goa.
-                    </p>
-                    <div class="main_ctas">
-                        <a href="/portfolio" class="btn btn-pri">View work</a>
-                        <a href="/contact" class="btn btn-sec">Get in touch</a>
-                    </div>
+
+
+
+<div class="main_outer outer">
+    <main class="main main_inner inner">
+        <div class="main_left">
+            <a class="main_scroll_anchor">
+                <div class="main_scroll">
+                    {% include "img/icons/scroll-shape.svg" %}
+                    {% include "img/icons/scroll-arrow.svg" %}
+                </div>
+            </a>
+            <div class="main_content">
+                <h1 class="main_title">
+                    I craft beautiful web experiences.
+                </h1>
+                <p class="main_desc">
+                    I'm Gavin Pereira, a graphic designer and frontend developer from Goa.
+                </p>
+                <div class="main_ctas">
+                    <a href="/portfolio" class="btn btn-pri">View work</a>
+                    <a href="/contact" class="btn btn-sec">Get in touch</a>
                 </div>
             </div>
-            <div class="main_right">
-                <img src="/img/gavin-pereira.png" class="main_hero" alt="Gavin Pereira portrait">
-                {% include "img/shapes.svg" %}
-                <div class="piracy"></div>
-            </div>
-        </main>
+        </div>
+        <div class="main_right">
+            <img src="/img/gavin-pereira.png" class="main_hero" alt="Gavin Pereira portrait">
+            {% include "img/shapes.svg" %}
+            <div class="piracy"></div>
+        </div>
+    </main>
+</div>
+
+<section class="co_outer outer" id="scroll">
+    <div class="co co_inner inner">
+
+
+        {% for c in co %}
+        <div class="co_item">
+            <span class="co_date">{{c.duration}}</span>
+            <h3 class="co_name">{{c.position}}</h3>
+            <img class="co_image" src="/img/co/{{c.img}}" alt="{{c.company}}" title="{{c.company}}">
+        </div>
+        {% endfor %}
+
+
     </div>
+</section>
 
 
-    <section class="recent_outer outer" id="scroll">
-        <div class="recent recent_inner inner">
-            <h2 class="recent_title section_title">
-                Check out my recent work
-            </h2>
-            <p class="recent_desc section_desc">
-                <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, a! -->
-            </p>
-            <div class="recent_grid">               
+<section class="recent_outer outer">
+    <div class="recent recent_inner inner">
+        <h2 class="recent_title section_title">
+            Check out my recent work
+        </h2>
+        <p class="recent_desc section_desc">
+            <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, a! -->
+        </p>
+        <div class="recent_grid">
 
-                {% for i in range(0, 6) %}
-                    <div class="post">
-                        <div class="post_image_flex">
-                            {% if posts[i].image %}
-                                <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].image}}" class="post_image"  data-slug="{{posts[i].image}}" loading="lazy">
-                            {% endif %}
-                            {% if posts[i].video %}
-                                <video src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].video}}" autoplay muted loop class="post_image" data-slug="{{posts[i].video}}"  loading="lazy"></video>
-                            {% endif %}
-                            <div class="post_enlarge"><i class="fas fa-expand-arrows-alt"></i></div>
-                        </div>
-                        <h4 class="post_title">{{posts[i].name}}</h4>
-                        <p class="post_desc">{{posts[i].type}}</p>
-                        {% if posts[i].link %}
-                            <a class="post_link" href="http://{{posts[i].link}}" target="_blank">{{posts[i].link}}</a>
-                        {% endif %}
-                    </div>
-                {% endfor %}
-
+            {% for i in range(0, 6) %}
+            <div class="post">
+                <div class="post_image_flex">
+                    {% if posts[i].image %}
+                    <img src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].image}}" class="post_image"
+                        data-slug="{{posts[i].image}}" loading="lazy">
+                    {% endif %}
+                    {% if posts[i].video %}
+                    <video src="https://ik.imagekit.io/gavin/gavinpereira/tr:w-450/{{posts[i].video}}" autoplay muted
+                        loop class="post_image" data-slug="{{posts[i].video}}" loading="lazy"></video>
+                    {% endif %}
+                    <div class="post_enlarge"><i class="fas fa-expand-arrows-alt"></i></div>
+                </div>
+                <h4 class="post_title">{{posts[i].name}}</h4>
+                <p class="post_desc">{{posts[i].type}}</p>
+                {% if posts[i].link %}
+                <a class="post_link" href="http://{{posts[i].link}}" target="_blank">{{posts[i].link}}</a>
+                {% endif %}
             </div>
-            <a href="/portfolio" class="recent_btn btn btn-primary">VIEW MORE</a>
+            {% endfor %}
+
         </div>
-    </section>
+        <a href="/portfolio" class="recent_btn btn btn-primary">VIEW MORE</a>
+    </div>
+</section>
 
 
-    <section class="tests_outer outer">
-        <div class="test test_inner inner">
-            <h2 class="tests_title section_title">
-                Hear from my clients
-            </h2>
-            <p class="tests_desc section_desc">
-                <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse suscipit minima sequi exercitationem facere aspernatur. -->
-            </p>
+<section class="tests_outer outer">
+    <div class="test test_inner inner">
+        <h2 class="tests_title section_title">
+            Hear from my clients
+        </h2>
+        <p class="tests_desc section_desc">
+            <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse suscipit minima sequi exercitationem facere aspernatur. -->
+        </p>
 
-            <div class="tests_grid">
+        <div class="tests_grid">
 
-                {% for test in testimonials %}
-                    <div class="test">
-                        <div class="test_tint">
-                            <img src="{{test.image}}" alt="{{test.name}}" title="{{test.name}}" class="test_image">
-                        </div>
-                        <q class="test_quote">{{test.quote}}</q>
-                        <h4 class="test_name">{{test.name}}</h4>
-                        <h5 class="test_desg">{{test.desgn}}</h5>
-                    </div>
-                {% endfor %}
-
+            {% for test in testimonials %}
+            <div class="test">
+                <div class="test_tint">
+                    <img src="{{test.image}}" alt="{{test.name}}" title="{{test.name}}" class="test_image">
+                </div>
+                <q class="test_quote">{{test.quote}}</q>
+                <h4 class="test_name">{{test.name}}</h4>
+                <h5 class="test_desg">{{test.desgn}}</h5>
             </div>
+            {% endfor %}
+
         </div>
-    </section>
+    </div>
+</section>
 
 
 
-    <section class="clients_outer outer">
-        <div class="clients clients_inner inner">
-            <h2 class="clients_title section_title">
-                I have worked with
-            </h2>
-            <div class="clients_grid">
-                {% for client in clients %}
-                    <img class="client_logo" src="{{client.image}}" alt="{{client.name}}" title="{{client.name}}">
-                {% endfor %}
-                <div class="piracy"></div>
-            </div>
+<section class="clients_outer outer">
+    <div class="clients clients_inner inner">
+        <h2 class="clients_title section_title">
+            I have worked with
+        </h2>
+        <div class="clients_grid">
+            {% for client in clients %}
+            <img class="client_logo" src="{{client.image}}" alt="{{client.name}}" title="{{client.name}}">
+            {% endfor %}
+            <div class="piracy"></div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 {% include 'footer.njk' %}
@@ -129,7 +150,6 @@ layout: 'base.njk'
 <script>
     var scrollBtn = $('.main_scroll_anchor')
     var nextSection = $('#scroll')
-    scrollBtn.addEventListener('click',()=>nextSection.scrollIntoView())
+    scrollBtn.addEventListener('click', () => nextSection.scrollIntoView())
 </script>
 <script>lightboxListener()</script>
-
