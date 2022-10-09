@@ -735,6 +735,7 @@ section.main_outer {
 .scroll_arrow path {
   fill: var(--subheading);
   transition: 300ms;
+  cursor: pointer;
 }
 
 .main_hero {
@@ -1086,6 +1087,7 @@ section .co_inner {
 }
 .co_image {
   filter: grayscale(1);
+  transition: all 300ms ease-in;
 }
 .co_image:hover {
   filter: grayscale(0);
