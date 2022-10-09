@@ -1087,6 +1087,9 @@ section .co_inner {
 .co_image {
   filter: grayscale(1);
 }
+.co_image:hover {
+  filter: grayscale(0);
+}
 
 .co_item {
   max-width: 300px;
