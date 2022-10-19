@@ -1077,7 +1077,6 @@ section .co_inner {
   width: fit-content;
   margin: 0 auto;
   padding-bottom: 0;
-  align-items: start;
 }
 
 @media screen and (max-width: 500px) {
@@ -1085,11 +1084,11 @@ section .co_inner {
     grid-template-columns: 1fr;
   }
 }
-.co_image {
+.co_link {
   filter: grayscale(1);
-  transition: all 300ms ease-in;
+  transition: all 300ms ease-out;
 }
-.co_image:hover {
+.co_link:hover {
   filter: grayscale(0);
 }
 

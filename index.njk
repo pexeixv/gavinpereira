@@ -53,7 +53,8 @@ layout: 'base.njk'
         <div class="co_item">
             <span class="co_date">{{c.duration}}</span>
             <h3 class="co_name">{{c.position}}</h3>
-            <img class="co_image" src="/img/co/{{c.img}}" alt="{{c.company}}" title="{{c.company}}">
+            <a href="{{c.link}}" class="co_link" target="_blank"><img class="co_image" src="/img/co/{{c.img}}"
+                    alt="{{c.company}}" title="{{c.company}}"></a>
         </div>
         {% endfor %}
 
