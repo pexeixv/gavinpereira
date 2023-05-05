@@ -1,5 +1,19 @@
 [
     {
+        "name": "Archie Kitchen 'n Bar",
+        "image": "archie-goa.jpg",
+        "category": "frontend",
+        "type": "JAMstack Web Development",
+        "tags": [
+            "TailwindCSS",
+            "Next.js",
+            "Git",
+            "Sanity"
+        ],
+        "desc": "Restaurant website with menu system integrated",
+        "link": "archiegoa.in"
+    },
+    {
         "name": "TAB Nation",
         "image": "tab-nation.jpg",
         "category": "frontend",
