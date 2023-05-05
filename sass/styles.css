@@ -1104,12 +1104,13 @@ section .co_inner {
   max-height: 50px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   section .co_inner {
     grid-template-columns: 1fr;
   }
   .co_item {
     align-items: center;
+    margin: 0 auto;
   }
 }
 .port_outer {
