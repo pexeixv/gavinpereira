@@ -8,9 +8,6 @@ section .co_inner
     margin: 0 auto
     padding-bottom: 0
 
-@media screen and ( max-width: 500px )
-    section .co_inner
-        grid-template-columns: 1fr
 
 .co_link
     filter: grayscale(1)
@@ -33,3 +30,9 @@ section .co_inner
 .co_image
     max-width: 200px
     max-height: 50px
+
+@media screen and ( max-width: 500px )
+    section .co_inner
+        grid-template-columns: 1fr
+    .co_item
+        align-items: center

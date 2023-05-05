@@ -1076,11 +1076,6 @@ section .co_inner {
   padding-bottom: 0;
 }
 
-@media screen and (max-width: 500px) {
-  section .co_inner {
-    grid-template-columns: 1fr;
-  }
-}
 .co_link {
   filter: grayscale(1);
   transition: all 300ms ease-out;
@@ -1109,6 +1104,14 @@ section .co_inner {
   max-height: 50px;
 }
 
+@media screen and (max-width: 500px) {
+  section .co_inner {
+    grid-template-columns: 1fr;
+  }
+  .co_item {
+    align-items: center;
+  }
+}
 .port_outer {
   background: --background-secondary;
 }
