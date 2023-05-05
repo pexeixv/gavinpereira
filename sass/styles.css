@@ -411,7 +411,6 @@ div.header_theme {
   }
 }
 .header_nav-expanded {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   opacity: 1;
@@ -597,7 +596,6 @@ div.header_theme {
 .post_image_flex {
   background: black;
   width: 100%;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   display: grid;
@@ -1068,11 +1066,10 @@ section.main_outer {
 }
 section .co_inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
   padding-left: 20px;
   padding-right: 20px;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
@@ -1094,7 +1091,6 @@ section .co_inner {
 
 .co_item {
   max-width: 300px;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -1106,6 +1102,11 @@ section .co_inner {
   font-size: 0.85rem;
   font-weight: 300;
   font-style: italic;
+}
+
+.co_image {
+  max-width: 200px;
+  max-height: 50px;
 }
 
 .port_outer {
@@ -1170,16 +1171,7 @@ section .port_inner {
   opacity: 0.3;
   width: 100%;
   background: var(--text-muted);
-  -webkit-animation: skeleton-loading 700ms linear infinite alternate;
-          animation: skeleton-loading 700ms linear infinite alternate;
-}
-@-webkit-keyframes skeleton-loading {
-  from {
-    opacity: 0.3;
-  }
-  to {
-    opacity: 0.5;
-  }
+  animation: skeleton-loading 700ms linear infinite alternate;
 }
 @keyframes skeleton-loading {
   from {
@@ -1331,7 +1323,6 @@ section .port_inner {
 
 .form_submit {
   font-size: 1.05rem;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   margin-top: 2em;
@@ -1341,21 +1332,12 @@ section .port_inner {
   transform: translateY(-50px);
 }
 
-.form_field:not(:-ms-input-placeholder) + .form_placeholder {
-  transform: translateY(-50px);
-}
-
 .form_field:focus + .form_placeholder,
 .form_field:not(:placeholder-shown) + .form_placeholder {
   transform: translateY(-50px);
 }
 
 .form_field:not(:-moz-placeholder-shown) {
-  background: var(--subheading);
-  border-radius: 5px;
-}
-
-.form_field:not(:-ms-input-placeholder) {
   background: var(--subheading);
   border-radius: 5px;
 }
@@ -1515,8 +1497,7 @@ section .prose_inner {
 .prose a {
   color: var(--text);
   text-decoration: underline;
-  -webkit-text-decoration-color: var(--primary);
-          text-decoration-color: var(--primary);
+  text-decoration-color: var(--primary);
   transition: all 300ms;
 }
 .prose a:hover {

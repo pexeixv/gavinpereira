@@ -4,7 +4,14 @@
         "position": "Software Engineer 1",
         "img": "zimetrics.png",
         "duration": "August 2022 - present",
-        "link": "https://i.gavn.in/zmx"
+        "link": "https://www.zimetrics.com"
+    },
+    {
+        "company": "Jain University",
+        "position": "MCA Fullstack Development",
+        "img": "jain.png",
+        "duration": "September 2022 - present",
+        "link": "https://www.jainuniversity.ac.in"
     },
     {
         "company": "Parvatibai Chowgule College",
