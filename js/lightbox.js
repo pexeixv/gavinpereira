@@ -17,10 +17,12 @@ var lightboxListener = () => {
                 var img = document.createElement('img')
                 img.classList.add('lightbox_image')
                 img.src = image.src
-                img.srcset = ` https://ik.imagekit.io/gavin/gavinpereira/tr:w-450,pr-true/${slug} 500w,
-                https://ik.imagekit.io/gavin/gavinpereira/tr:w-500,pr-true/${slug} 700w,
-                https://ik.imagekit.io/gavin/gavinpereira/tr:w-800,pr-true/${slug} 1000w,
-                `
+                img.srcset = `https://ik.imagekit.io/gavin/gavinpereira/tr:w-450,pr-true/${slug} 450w,
+              https://ik.imagekit.io/gavin/gavinpereira/tr:w-500,pr-true/${slug} 500w,
+              https://ik.imagekit.io/gavin/gavinpereira/tr:w-800,pr-true/${slug} 800w,
+              https://ik.imagekit.io/gavin/gavinpereira/tr:w-1000,pr-true/${slug} 1000w
+              `
+
             }
             if (videoTag) {
                 var img = document.createElement('video')
