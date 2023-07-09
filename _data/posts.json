@@ -1,5 +1,19 @@
 [
     {
+        "name": "StarJam",
+        "image": "starjam.jpg",
+        "category": "frontend",
+        "type": "JAMstack Web Development",
+        "tags": [
+            "Astro",
+            "TailwindCSS",
+            "Hygraph",
+            "Git"
+        ],
+        "desc": "Product display for a drum manufacturer",
+        "link": "starjam.in"
+    },
+    {
         "name": "Archie Kitchen 'n Bar",
         "image": "archie-goa.jpg",
         "category": "frontend",
