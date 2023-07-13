@@ -1,0 +1,81 @@
+---
+title: Pay
+layout: 'base.njk'
+
+---
+
+<div id="pay">
+    {% include 'header.njk' %}
+    <div class="header_cover" style="background: var(--background)"></div>
+    <section class="inner">
+        <div>
+            <div class="card">
+                <h2>
+                    <span>Pay via</span>
+                    <img src="/img/pay/upi.svg" alt="UPI" style="height:1.5rem; position: relative; top: 5px">
+                </h2>
+                <img src="/img/pay/qr.svg" alt="Scan QR Code" style="height: 12rem">
+                <span data-decode="cGV4QHVwaQ==" data-copy></span>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <h2>
+                    <span>Pay via</span>
+                    <img src="/img/pay/paypal.svg" alt="PayPal" style="height: 1.5rem">
+                </h2>
+                <span data-decode="cGV4ZWl4dkBnbWFpbC5jb20=" data-copy></span>
+            </div>
+            <div class="card">
+                <h2>
+                    Transfer to Bank Account
+                </h2>
+                <div>
+                    <div>
+                        <strong>Account Holder:
+                        </strong>
+                        <span data-decode="R2F2aW4gSHVtYmVydCBQZXJlaXJh" data-copy></span>
+                    </div>
+                    <div>
+                        <strong>Account Number:
+                        </strong>
+                        <span data-decode="Nzc3NzAxMDMwMTg2MzI=" data-copy></span>
+                    </div>
+                    <div>
+                        <strong>Bank Name:
+                        </strong>
+                        <span data-decode="RmVkZXJhbCBCYW5r" data-copy></span>
+                    </div>
+                    <div>
+                        <strong>IFSC Code:
+                        </strong>
+                        <span data-decode="RkRSTDAwMDc3Nzc=" data-copy></span>
+                    </div>
+                    <div>
+                        <strong>SWIFT Code:
+                        </strong>
+                        <span data-decode="RkRSTElOQkJJQkQ=" data-copy></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const copyToClipboard = (text) => {
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.setAttribute("readonly", "");
+            textarea.style.position = "absolute";
+            textarea.style.left = "-9999px";
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+        };
+        const elementsToDecode = document.querySelectorAll("[data-decode]");
+        const elementsToCopy = document.querySelectorAll("[data-copy]");
+        elementsToDecode.forEach((element) => (element.innerText = atob(element.dataset.decode)));
+        elementsToCopy.forEach((element) => element.addEventListener("click", () => copyToClipboard(element.innerText)));
+    </script>
+    {% include 'footer.njk' %}
+</div>

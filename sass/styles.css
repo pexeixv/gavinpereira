@@ -1508,6 +1508,61 @@ section .prose_inner {
   color: var(--primary);
 }
 
+#pay {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#pay section {
+  padding: 5em 0;
+  flex: 1;
+  width: 90%;
+  display: grid;
+  gap: 2em;
+}
+#pay .card {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  gap: 1em;
+  background: var(--background-secondary);
+}
+#pay .column {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+#pay [data-copy] {
+  cursor: pointer;
+  position: relative;
+}
+#pay [data-copy]:hover::after {
+  opacity: 1;
+}
+#pay [data-copy]::after {
+  position: absolute;
+  content: "Click to copy";
+  font-size: 0.65rem;
+  padding: 2px 4px;
+  background: white;
+  border-radius: 3px;
+  color: black;
+  white-space: nowrap;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 110%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms;
+}
+
+@media screen and (min-width: 900px) {
+  #pay section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 body {
   background: var(--background);
   color: var(--text);
