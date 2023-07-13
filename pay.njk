@@ -14,7 +14,7 @@ layout: 'base.njk'
                     <span>Pay via</span>
                     <img src="/img/pay/upi.svg" alt="UPI" style="height:1.5rem; position: relative; top: 5px">
                 </h2>
-                <img src="/img/pay/qr.svg" alt="Scan QR Code" style="height: 12rem">
+                <img src="/img/pay/qr.svg" alt="Scan QR Code" style="height: 12rem" class="qr">
                 <span data-decode="cGV4QHVwaQ==" data-copy></span>
             </div>
         </div>
@@ -60,6 +60,7 @@ layout: 'base.njk'
             </div>
         </div>
     </section>
+    <script src="/js/script.js"></script>
     <script>
         const copyToClipboard = (text) => {
             const textarea = document.createElement("textarea");

@@ -1563,6 +1563,10 @@ section .prose_inner {
     grid-template-columns: 1fr 1fr;
   }
 }
+.darkmode #pay .qr {
+  filter: invert(1);
+}
+
 body {
   background: var(--background);
   color: var(--text);
