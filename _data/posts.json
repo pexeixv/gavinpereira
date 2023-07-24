@@ -1,5 +1,18 @@
 [
     {
+        "name": "Waldbaden von Maria Kienzl",
+        "image": "waldbaden.jpg",
+        "category": "frontend",
+        "type": "JAMstack Web Development",
+        "tags": [
+            "Astro",
+            "TailwindCSS",
+            "Git"
+        ],
+        "desc": "German website for forest bathing service in Austria",
+        "link": "mk.gavn.in"
+    },
+    {
         "name": "StarJam",
         "image": "starjam.jpg",
         "category": "frontend",
@@ -62,7 +75,7 @@
             "Git",
             "11ty"
         ],
-        "desc": "Portfolio website for a product photographer. Still under construction. 🚧",
+        "desc": "Portfolio website for a product photographer",
         "link": "fizardo.in"
     },
     {
