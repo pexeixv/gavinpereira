@@ -1,5 +1,31 @@
 [
     {
+        "name": "Buildluxe",
+        "image": "buildluxe.jpg",
+        "category": "frontend",
+        "type": "JAMstack Web Development",
+        "tags": [
+            "Astro",
+            "TailwindCSS",
+            "Git"
+        ],
+        "desc": "Construction company",
+        "link": "bl.gavn.in"
+    },
+    {
+        "name": "Hightec Engineers",
+        "image": "hightec.jpg",
+        "category": "frontend",
+        "type": "JAMstack Web Development",
+        "tags": [
+            "Astro",
+            "TailwindCSS",
+            "Git"
+        ],
+        "desc": "Construction company",
+        "link": "he.gavn.in"
+    },
+    {
         "name": "Waldbaden von Maria Kienzl",
         "image": "waldbaden.jpg",
         "category": "frontend",
@@ -10,7 +36,7 @@
             "Git"
         ],
         "desc": "German website for forest bathing service in Austria",
-        "link": "mk.gavn.in"
+        "link": "waldbaden-graz.at"
     },
     {
         "name": "StarJam",
