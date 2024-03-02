@@ -1,7 +1,5 @@
 /home /
 /work /portfolio
-/resume /gavin-pereira-resume.pdf
-/cv /gavin-pereira-resume.pdf
 /who /about
 /gavin /about
 /me /about
@@ -12,6 +10,10 @@
 
 /tab22 /
 /TAB22 /
+
+/resume https://read.cv/pex
+/cv https://read.cv/pex
+/old-cv /gavin-pereira-resume.pdf
 
 /fav /img/fav/favicon.ico
 /logo /img/logo.svg
