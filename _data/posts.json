@@ -1,5 +1,19 @@
 [
     {
+        "name": "Amazing Credit Cards",
+        "image": "amazingcreditcards.jpg",
+        "category": "frontend",
+        "type": "JAMstack Web Development",
+        "tags": [
+            "Astro",
+            "TailwindCSS",
+            "Hygraph",
+            "Git"
+        ],
+        "desc": "Credit cards information site",
+        "link": "amazingcreditcards.in"
+    },
+    {
         "name": "Buildluxe",
         "image": "buildluxe.jpg",
         "category": "frontend",
