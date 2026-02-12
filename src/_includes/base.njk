@@ -37,7 +37,11 @@
             </div>
         </noscript>
         {{ content | safe }}
-        {# Snow Fall #}
-        <script src="/js/snow.js"></script>
+
+         {# Snow Fall ONLY for Christmas #}
+            {% if env.SEASON and env.SEASON | lower == "xmas" %}
+                <script src="/js/snow.js"></script>
+            {% endif %}
+
     </body>
 </html>

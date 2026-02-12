@@ -1,3 +1,9 @@
+{% set logoSuffix = "default" %}
+
+{% if env.SEASON %}
+  {% set logoSuffix = env.SEASON | lower %}
+{% endif %}
+
 <div class="header_outer outer">
     <header class="header header_inner inner">
         {% if title!='Home' %}
@@ -7,10 +13,12 @@
                 <a href="#">
                 {% endif %}
                 <div class="header_logo">
-                    <img src="/img/more-logos/logo-xmas-black.svg" alt="Gavin Pereira logo" class="header_logo_icon logo logo-dark">
-                        <img src="/img/more-logos/logo-xmas-white.svg" alt="Gavin Pereira logo" class="header_logo_icon logo logo-lite">
-                            <span class="header_logo_text">Gavin Pereira</span>
-                        </div>
+      <img  src="/img/logos/logo-{{ logoSuffix }}-black.svg" alt="Gavin Pereira logo" class="header_logo_icon logo logo-dark">
+      <img  src="/img/logos/logo-{{ logoSuffix }}-white.svg" alt="Gavin Pereira logo" class="header_logo_icon logo logo-lite">
+
+  
+  <span class="header_logo_text">Gavin Pereira</span>
+</div>
                     </a>
                     <nav class="nav header_nav ">
                         {{ '<a href="#" class="nav_link nav_link-active">Home</a>'|safe

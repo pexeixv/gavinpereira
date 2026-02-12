@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/sass/styles.css");
   eleventyConfig.addPassthroughCopy("src/img");
@@ -6,7 +8,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/_data/posts.json");
   eleventyConfig.addPassthroughCopy({ "src/public/*": "/" });
   eleventyConfig.addFilter("lowerAndHyphen", (string) =>
-    string.toLowerCase().replace(/\s/g, "-")
+    string.toLowerCase().replace(/\s/g, "-"),
   );
   return {
     dir: {
