@@ -6,7 +6,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/font");
   eleventyConfig.addPassthroughCopy("src/_data/posts.json");
-  eleventyConfig.addPassthroughCopy({ "src/public/*": "/" });
+  eleventyConfig.addPassthroughCopy({ "public/*": "/" });
   eleventyConfig.addFilter("lowerAndHyphen", (string) =>
     string.toLowerCase().replace(/\s/g, "-"),
   );
