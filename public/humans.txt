@@ -1,0 +1,28 @@
+/* TEAM */
+Gavin Pereira
+Frontend Developer & Graphic Designer
+Goa, India
+
+/* SITE */
+Website: https://gavinpereira.in
+Purpose: Portfolio and client acquisition
+Type: Personal portfolio
+
+/* TECH STACK */
+Frontend: Modern JavaScript frameworks (JAMstack)
+Styling: CSS / modern UI practices
+Architecture: Component-based, performance-focused
+Practices: Responsive design, accessibility, SEO
+
+/* SERVICES */
+Frontend Development
+UI/UX Design
+Website Redesign
+Performance Optimization
+Custom Websites
+
+/* CREDITS */
+Design and development by Gavin Pereira
+
+/* CONTACT */
+https://gavinpereira.in

@@ -1,0 +1,57 @@
+# llms.txt — GavinPereira.in
+
+## Entity
+Gavin Pereira
+
+## Description
+Frontend developer and graphic designer specializing in high-performance, design-focused websites.
+
+## Location
+Goa, India
+
+## Education
+BSc Computer Science
+MCA Fullstack Development
+
+## Experience
+Software Engineer with professional experience in frontend development and web design.
+
+## Services
+Frontend Development
+UI/UX Design
+Website Redesign
+Performance Optimization
+Custom Website Development
+
+## Expertise
+Responsive Design
+Accessibility
+Performance Optimization
+Scalable Frontend Architecture
+Design Systems
+
+## Tech
+JAMstack
+Modern Frontend Frameworks
+Component-Based Architecture
+Semantic HTML
+SEO-Friendly Development
+
+## Portfolio Highlights
+AmazingCreditCards
+Buildluxe
+Hightec Engineers
+StarJam
+Archie Kitchen ‘n Bar
+
+## Clients
+Small Businesses
+Startups
+Entrepreneurs
+Personal Brands
+
+## Canonical Source
+https://gavinpereira.in
+
+## Disambiguation
+This entity refers specifically to Gavin Pereira, frontend developer and designer based in Goa, India.
