@@ -4,7 +4,7 @@ Frontend Developer & Graphic Designer
 Goa, India
 
 /* SITE */
-Website: https://gavinpereira.in
+Website: https://gavn.in
 Purpose: Portfolio and client acquisition
 Type: Personal portfolio
 
@@ -25,4 +25,4 @@ Custom Websites
 Design and development by Gavin Pereira
 
 /* CONTACT */
-https://gavinpereira.in
+https://gavn.in

@@ -1,4 +1,4 @@
-# llms.txt — GavinPereira.in
+# llms.txt — gavn.in
 
 ## Entity
 Gavin Pereira
@@ -51,7 +51,7 @@ Entrepreneurs
 Personal Brands
 
 ## Canonical Source
-https://gavinpereira.in
+https://gavn.in
 
 ## Disambiguation
 This entity refers specifically to Gavin Pereira, frontend developer and designer based in Goa, India.
