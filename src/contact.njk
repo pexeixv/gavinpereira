@@ -1,87 +1,125 @@
 ---
 title: Contact
 layout: 'base.njk'
-
 ---
-
 
 {% include 'header.njk' %}
 <div class="header_cover"></div>
 
+<section class="contact_outer outer">
+    <div class="contact contact_inner inner">
+        <h2 class="contact_title section_title">
+            Drop me a line
+        </h2>
 
+        <form netlify class="contact_form" name="contact" method="POST">
 
-    <section class="contact_outer outer">
-        <div class="contact contact_inner inner">
-            <h2 class="contact_title section_title">
-                Drop me a line
-            </h2>
-            <form netlify class="contact_form" name="contact" method="POST">
+            <div class="form_row">
+                <div class="form_name">
+                    <input type="text" name="Name" id="form-name" class="form_name_input form_field"
+                        required="required" placeholder=" ">
+                    <label class="form_name_text form_placeholder">Name</label>
+                </div>
 
-                <div class="form_row">
-                    <div class="form_name">
-                        <input type="text" name="Name" id="form-name" class="form_name_input form_field"
-                            required="required" placeholder=" ">
-                        <label class="form_name_text form_placeholder">Name</label>
-                    </div>
-                    <div class="form_email">
-                        <input type="email" name="Email" id="form-email" class="form_email_input form_field "
-                            required="required" placeholder=" ">
-                        <label class="form_email_text form_placeholder">eMail Address</label>
-                    </div>
+                <div class="form_email">
+                    <input type="email" name="Email" id="form-email" class="form_email_input form_field"
+                        required="required" placeholder=" ">
+                    <label class="form_email_text form_placeholder">eMail Address</label>
                 </div>
-                <div class="form_row">
-                    <div class="form_message">
-                        <textarea name="Message" id="form-message" cols="100" rows="10" class="form_message_input form_field"
-                            required="required" placeholder=" "></textarea>
-                        <label class="form_message_text form_placeholder">Message</label>
-                    </div>
+            </div>
+
+            <div class="form_row">
+                <div class="form_message">
+                    <textarea name="Message" id="form-message" cols="100" rows="10"
+                        class="form_message_input form_field"
+                        required="required" placeholder=" "></textarea>
+                    <label class="form_message_text form_placeholder">Message</label>
                 </div>
-                <div class="form_row">
-                    <div data-netlify-recaptcha="true"></div>
-                </div>
-                <div class="form_row">
-                    <input type="submit" value="SEND" class="form_submit btn btn-pri">
-                </div>
-            </form>
-        </div>
-    </section>
+            </div>
+
+            <div class="form_row">
+                <div data-netlify-recaptcha="true"></div>
+            </div>
+
+            <div class="form_row">
+                <input type="submit" value="SEND" class="form_submit btn btn-pri">
+            </div>
+
+        </form>
+    </div>
+</section>
 
 <div style="background: var(--background-secondary)">
     <div style="width: 90%; max-width: 400px; margin: auto; height: 1.5px; background: var(--primary);"></div>
 </div>
 
+<section class="socials_outer outer">
+    <div class="socials socials_inner inner">
 
-    <section class="socials_outer outer">
-        <div class="socials socials_inner inner">
-            <div class="socials_row socials_row-big">
-                <a href="//wa.me/918888253992" class="btn-big"  target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <span class="btn-big_text">Text me on WhatsApp</span>
-                </a>
-                <a href="mailto:connect@gavinpereira.in" class="btn-big"  target="_blank">
-                    <i class="fas fa-envelope"></i>
-                    <span class="btn-big_text">connect@gavinpereira.in</span>
-                </a>
-            </div>
-            <div class="socials_row socials_row-round">
+        <div class="socials_row socials_row-big">
 
-                {% for icon in contact_icons %}
-                    <a class="btn-round" href="{{icon.link}}" target="_blank">
-                        <div><i class="{{icon.classes[0]}} {{icon.classes[1]}}"></i></div>
-                </a>
-                {% endfor %}
+            <a id="waLink" class="btn-big" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span class="btn-big_text" id="waText"></span>
+            </a>
 
-            </div>
-            <div class="address">
-                <p class="address_line">Vasco-da-Gama</p>
-                <p class="address_line">Goa, India</p>
-                <p class="address_line">403802</p>
-            </div>
-            
+            <a id="emailLink" class="btn-big" target="_blank">
+                <i class="fas fa-envelope"></i>
+                <span class="btn-big_text" id="emailText"></span>
+            </a>
+
         </div>
-    </section>
 
+        <div class="socials_row socials_row-round">
 
+            {% for icon in contact_icons %}
+                <a class="btn-round" href="{{icon.link}}" target="_blank">
+                    <div><i class="{{icon.classes[0]}} {{icon.classes[1]}}"></i></div>
+                </a>
+            {% endfor %}
+
+        </div>
+
+        <div class="address">
+            <p class="address_line">Vasco-da-Gama</p>
+            <p class="address_line">Goa, India</p>
+            <p class="address_line">403802</p>
+        </div>
+
+    </div>
+</section>
 
 {% include 'footer.njk' %}
-<script src="/js/script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    function decode(str){
+        return atob(str)
+    }
+
+    // encoded values
+    const phoneEncoded = "OTE4ODg4MjUzOTky"
+    const emailEncoded = "aGlAZ2F2bi5pbg=="
+
+    const phone = decode(phoneEncoded)
+    const email = decode(emailEncoded)
+
+    const waLink = document.getElementById("waLink")
+    const waText = document.getElementById("waText")
+
+    const emailLink = document.getElementById("emailLink")
+    const emailText = document.getElementById("emailText")
+
+    if (waLink && waText) {
+        waLink.href = "https://wa.me/" + phone
+        waText.textContent = "Text me on WhatsApp"
+    }
+
+    if (emailLink && emailText) {
+        emailLink.href = "mailto:" + email
+        emailText.textContent = email
+    }
+
+})
+</script>
