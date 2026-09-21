@@ -13,8 +13,8 @@ export function PaymentMethods() {
   )
 
   return (
-    <div className="grid gap-6 lg:grid-cols-2">
-      <Card className="h-full">
+    <div className="grid items-start gap-6 lg:grid-cols-2">
+      <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-lg">
             Pay via
