@@ -16,6 +16,7 @@ function Accordion({
   )
 }
 
+/** Cards rather than hairlines — the portfolio sections need more presence. */
 function AccordionItem({
   className,
   ...props
@@ -23,7 +24,10 @@ function AccordionItem({
   return (
     <AccordionPrimitive.Item
       data-slot="accordion-item"
-      className={cn("not-last:border-b", className)}
+      className={cn(
+        "overflow-hidden rounded-xl border bg-card transition-colors not-last:mb-4 has-data-open:border-primary/40",
+        className
+      )}
       {...props}
     />
   )
@@ -39,14 +43,20 @@ function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "group/accordion-trigger relative flex flex-1 items-start justify-between rounded-lg border border-transparent py-2.5 text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:after:border-ring disabled:pointer-events-none disabled:opacity-50 **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 **:data-[slot=accordion-trigger-icon]:text-muted-foreground",
+          "group/accordion-trigger relative flex flex-1 items-center justify-between gap-4 rounded-xl border border-transparent px-5 py-5 text-left text-lg font-bold transition-all outline-none hover:bg-muted/50 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 sm:text-xl **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:text-primary",
           className
         )}
         {...props}
       >
         {children}
-        <ChevronDownIcon data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
-        <ChevronUpIcon data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
+        <ChevronDownIcon
+          data-slot="accordion-trigger-icon"
+          className="pointer-events-none shrink-0 transition-transform group-aria-expanded/accordion-trigger:hidden"
+        />
+        <ChevronUpIcon
+          data-slot="accordion-trigger-icon"
+          className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline"
+        />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )
@@ -65,7 +75,7 @@ function AccordionContent({
     >
       <div
         className={cn(
-          "h-(--radix-accordion-content-height) pt-0 pb-2.5 [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
+          "h-(--radix-accordion-content-height) border-t px-5 pt-6 pb-6",
           className
         )}
       >
