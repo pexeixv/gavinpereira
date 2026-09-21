@@ -63,18 +63,10 @@ export function loadRecaptcha(): Promise<Grecaptcha> {
       })
     }
 
-    const existing = document.getElementById(SCRIPT_ID)
-    if (existing) {
-      existing.addEventListener('load', onReady, { once: true })
-      existing.addEventListener(
-        'error',
-        () => {
-          reject(new Error('Failed to load reCAPTCHA.'))
-        },
-        { once: true },
-      )
-      return
-    }
+    // A script element that failed earlier has already fired its load/error
+    // events, so subscribing to them again would leave this promise pending
+    // for ever. Drop it and insert a fresh one instead.
+    document.getElementById(SCRIPT_ID)?.remove()
 
     const script = document.createElement('script')
     script.id = SCRIPT_ID
@@ -85,6 +77,8 @@ export function loadRecaptcha(): Promise<Grecaptcha> {
     script.addEventListener(
       'error',
       () => {
+        // Clearing the memo lets a later mount retry; the dead element is
+        // removed above on that next attempt.
         loader = null
         reject(new Error('Failed to load reCAPTCHA.'))
       },

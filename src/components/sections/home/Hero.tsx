@@ -4,15 +4,21 @@ import { Link } from 'react-router-dom'
 import { HeroShapes, ScrollPlinth } from '@/components/icons/decorative'
 import { Button } from '@/components/ui/button'
 import { site } from '@/content/data/site'
+import { usePrefersReducedMotion } from '@/hooks/use-prefers-reduced-motion'
 
 const NEXT_SECTION_ID = 'timeline'
 
 /** Opening screen: headline, calls to action and the portrait. */
 export function Hero() {
+  const prefersReducedMotion = usePrefersReducedMotion()
+
   const scrollToNext = () => {
-    document
-      .getElementById(NEXT_SECTION_ID)
-      ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    // `scrollIntoView` options override the stylesheet, so the reduced-motion
+    // rule in index.css cannot suppress this on its own.
+    document.getElementById(NEXT_SECTION_ID)?.scrollIntoView({
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      block: 'start',
+    })
   }
 
   return (

@@ -7,6 +7,8 @@ import { cn } from '@/lib/utils'
 interface LogoProps {
   /** Hides the wordmark, e.g. in tight footers on small screens. */
   showWordmark?: boolean
+  /** Called on activation — used to close the mobile navigation sheet. */
+  onNavigate?: () => void
   className?: string
   imageClassName?: string
 }
@@ -17,6 +19,7 @@ interface LogoProps {
  */
 export function Logo({
   showWordmark = true,
+  onNavigate,
   className,
   imageClassName,
 }: LogoProps) {
@@ -25,6 +28,7 @@ export function Logo({
   return (
     <Link
       to="/"
+      onClick={onNavigate}
       className={cn(
         'focus-ring group flex items-center gap-2 rounded-lg',
         className,
@@ -35,7 +39,12 @@ export function Logo({
         // never shows the previous glyph while the new file loads.
         key={logoSrc}
         src={logoSrc}
-        alt={`${site.name} logo`}
+        // With the wordmark alongside it the glyph is decorative; describing
+        // it as well would make the link read "Gavin Pereira logo Gavin
+        // Pereira". Without the wordmark it is the link's only content and
+        // has to carry the name.
+        alt={showWordmark ? '' : site.name}
+        aria-hidden={showWordmark || undefined}
         width={40}
         height={40}
         className={cn(

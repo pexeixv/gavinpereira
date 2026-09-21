@@ -1,6 +1,12 @@
-import { Formik, Form, Field as FormikField, type FieldProps } from 'formik'
+import {
+  Formik,
+  Form,
+  Field as FormikField,
+  useFormikContext,
+  type FieldProps,
+} from 'formik'
 import { SendIcon } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { toast } from 'sonner'
 import { toFormikValidationSchema } from 'zod-formik-adapter'
 
@@ -18,7 +24,8 @@ import {
   type ContactFormSchema,
 } from '@/lib/schemas/contact'
 import { isRecaptchaEnabled } from '@/lib/recaptcha'
-import { cn } from '@/lib/utils'
+
+const FIELD_ORDER: (keyof ContactFormSchema)[] = ['name', 'email', 'message']
 
 interface TextFieldProps {
   name: keyof ContactFormSchema
@@ -63,13 +70,17 @@ function TextField({
               aria-invalid={hasError}
               aria-describedby={hasError ? errorId : undefined}
             />
+            {/*
+              The live region is mounted on every render with a permanent
+              role, and only its text changes. Screen readers register a live
+              region when it appears and announce later mutations — adding the
+              role and the message in the same commit would silence the first
+              error for each field.
+            */}
             <p
               id={errorId}
-              role={hasError ? 'alert' : undefined}
-              className={cn(
-                'min-h-5 text-sm text-destructive',
-                !hasError && 'sr-only',
-              )}
+              role="alert"
+              className="min-h-5 text-sm text-destructive"
             >
               {hasError ? meta.error : ''}
             </p>
@@ -81,6 +92,29 @@ function TextField({
 }
 
 /**
+ * Moves focus to the first field that failed validation after a submit
+ * attempt, so a keyboard or screen-reader user is taken straight to the
+ * problem rather than being left to hunt for it.
+ */
+function FocusFirstError() {
+  const { submitCount, errors, isValid } = useFormikContext<ContactFormSchema>()
+  const lastHandled = useRef(0)
+
+  useEffect(() => {
+    if (submitCount === 0 || submitCount === lastHandled.current) return
+    lastHandled.current = submitCount
+    if (isValid) return
+
+    const firstInvalid = FIELD_ORDER.find((name) => errors[name])
+    if (!firstInvalid) return
+
+    document.getElementById(`contact-${firstInvalid}`)?.focus()
+  }, [submitCount, errors, isValid])
+
+  return null
+}
+
+/**
  * Contact form.
  *
  * Formik owns the field state, Zod owns validation (through the Formik
@@ -89,8 +123,16 @@ function TextField({
  */
 export function ContactForm() {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
+  const [recaptchaResetSignal, setRecaptchaResetSignal] = useState(0)
   const { mutateAsync, isPending } = useSubmitContactForm()
   const recaptchaRequired = isRecaptchaEnabled()
+
+  // reCAPTCHA tokens are single use, so the widget is cleared after every
+  // attempt that reached the server — success or failure.
+  const clearRecaptcha = () => {
+    setRecaptchaToken(null)
+    setRecaptchaResetSignal((signal) => signal + 1)
+  }
 
   return (
     <Formik<ContactFormSchema>
@@ -109,66 +151,76 @@ export function ContactForm() {
           })
           toast.success(result.message ?? 'Thanks! Your message is on its way.')
           helpers.resetForm()
-          setRecaptchaToken(null)
         } catch (error) {
           toast.error(
             isApiError(error)
               ? error.message
               : 'Your message could not be sent. Please try again.',
           )
+        } finally {
+          clearRecaptcha()
         }
       }}
     >
-      {({ isValid, dirty }) => (
-        <Form noValidate className="flex w-full flex-col gap-6">
-          <div className="grid gap-6 sm:grid-cols-2">
-            <TextField
-              name="name"
-              label="Name"
-              autoComplete="name"
-              placeholder="Your name"
-            />
-            <TextField
-              name="email"
-              label="Email address"
-              type="email"
-              autoComplete="email"
-              placeholder="you@example.com"
-            />
-          </div>
+      <Form noValidate className="flex w-full flex-col gap-6">
+        <FocusFirstError />
 
+        <div className="grid gap-6 sm:grid-cols-2">
           <TextField
-            name="message"
-            label="Message"
-            multiline
-            placeholder="Tell me about your project…"
+            name="name"
+            label="Name"
+            autoComplete="name"
+            placeholder="Your name"
           />
+          <TextField
+            name="email"
+            label="Email address"
+            type="email"
+            autoComplete="email"
+            placeholder="you@example.com"
+          />
+        </div>
 
-          <Recaptcha onChange={setRecaptchaToken} />
+        <TextField
+          name="message"
+          label="Message"
+          multiline
+          placeholder="Tell me about your project…"
+        />
 
-          <div className="flex justify-center">
-            <Button
-              type="submit"
-              variant="brand"
-              size="xl"
-              disabled={isPending || !dirty || !isValid}
-              className="min-w-40"
-            >
-              {isPending ? (
-                <>
-                  <Spinner aria-hidden="true" />
-                  Sending…
-                </>
-              ) : (
-                <>
-                  <SendIcon aria-hidden="true" />
-                  Send
-                </>
-              )}
-            </Button>
-          </div>
-        </Form>
-      )}
+        <Recaptcha
+          onChange={setRecaptchaToken}
+          resetSignal={recaptchaResetSignal}
+        />
+
+        <div className="flex justify-center">
+          {/*
+            Deliberately not disabled while the form is invalid: a disabled
+            button leaves the tab order with no way to find out what is wrong.
+            Submitting runs validation, reveals the messages and moves focus to
+            the first offending field.
+          */}
+          <Button
+            type="submit"
+            variant="brand"
+            size="xl"
+            disabled={isPending}
+            className="min-w-40"
+          >
+            {isPending ? (
+              <>
+                <Spinner aria-hidden="true" />
+                Sending…
+              </>
+            ) : (
+              <>
+                <SendIcon aria-hidden="true" />
+                Send
+              </>
+            )}
+          </Button>
+        </div>
+      </Form>
     </Formik>
   )
 }

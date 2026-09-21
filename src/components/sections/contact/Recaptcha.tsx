@@ -9,6 +9,12 @@ import { useThemeStore } from '@/store/theme-store'
 interface RecaptchaProps {
   /** Receives the response token, or `null` when it expires or errors. */
   onChange: (token: string | null) => void
+  /**
+   * Increment to clear the widget. reCAPTCHA tokens are single use, so the
+   * form bumps this after every submission attempt — otherwise the checkbox
+   * stays ticked while the token behind it is spent.
+   */
+  resetSignal?: number
 }
 
 /**
@@ -18,7 +24,7 @@ interface RecaptchaProps {
  * does not require a key; the form then submits without a token and the server
  * decides whether to accept it.
  */
-export function Recaptcha({ onChange }: RecaptchaProps) {
+export function Recaptcha({ onChange, resetSignal = 0 }: RecaptchaProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const widgetId = useRef<number | null>(null)
   const [status, setStatus] = useState<'idle' | 'ready' | 'error'>('idle')
@@ -69,6 +75,14 @@ export function Recaptcha({ onChange }: RecaptchaProps) {
     // solved. The widget keeps the theme it was created with.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  // Clear the ticked checkbox once the form has spent its token.
+  useEffect(() => {
+    if (resetSignal === 0) return
+    if (widgetId.current === null) return
+    window.grecaptcha?.reset(widgetId.current)
+    onChangeRef.current(null)
+  }, [resetSignal])
 
   if (!isRecaptchaEnabled()) return null
 

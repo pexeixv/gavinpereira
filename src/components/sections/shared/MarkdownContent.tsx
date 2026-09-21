@@ -8,7 +8,10 @@ import { cn } from '@/lib/utils'
  * site. Internal links stay in place.
  */
 const components: Components = {
-  a: ({ href, children, ...props }) => {
+  // `node` is the hast element react-markdown hands every override; it has to
+  // be pulled out of the rest, or it ends up spread onto the DOM anchor as an
+  // unknown attribute.
+  a: ({ node: _node, href, children, ...props }) => {
     const isExternal = Boolean(href && /^https?:\/\//.test(href))
     return (
       <a

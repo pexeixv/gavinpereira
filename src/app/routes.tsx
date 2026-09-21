@@ -10,6 +10,7 @@ const HomePage = lazy(() => import('@/pages/HomePage'))
 const AboutPage = lazy(() => import('@/pages/AboutPage'))
 const PortfolioPage = lazy(() => import('@/pages/PortfolioPage'))
 const ContactPage = lazy(() => import('@/pages/ContactPage'))
+const PayPage = lazy(() => import('@/pages/PayPage'))
 const LegalPage = lazy(() => import('@/pages/LegalPage'))
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'))
 
@@ -33,6 +34,7 @@ export const routes: RouteObject[] = [
       { path: 'about', element: withSuspense(<AboutPage />) },
       { path: 'portfolio', element: withSuspense(<PortfolioPage />) },
       { path: 'contact', element: withSuspense(<ContactPage />) },
+      { path: 'pay', element: withSuspense(<PayPage />) },
     ],
   },
   {

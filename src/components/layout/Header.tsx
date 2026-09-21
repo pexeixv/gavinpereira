@@ -1,4 +1,5 @@
 import { MenuIcon } from 'lucide-react'
+import { useMemo } from 'react'
 
 import { Logo } from '@/components/layout/Logo'
 import { Nav } from '@/components/layout/Nav'
@@ -12,7 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
-import { footerLinks } from '@/content/data/site'
+import { getFooterLinks } from '@/content/data/site'
 import { useHideOnScroll } from '@/hooks/use-hide-on-scroll'
 import { cn } from '@/lib/utils'
 import { useUiStore } from '@/store/ui-store'
@@ -23,6 +24,7 @@ import { SocialIconLink } from '@/components/sections/shared/SocialIconLink'
  * returns on the first upward scroll, matching the previous site.
  */
 export function Header() {
+  const footerLinks = useMemo(() => getFooterLinks(), [])
   const { isHidden, isScrolled } = useHideOnScroll()
   const isNavOpen = useUiStore((state) => state.isNavOpen)
   const setNavOpen = useUiStore((state) => state.setNavOpen)
@@ -33,7 +35,13 @@ export function Header() {
         'fixed inset-x-0 top-0 z-50 h-[4.375rem] transition-transform duration-300',
         'bg-background/85 supports-backdrop-filter:backdrop-blur-md',
         isScrolled && 'border-b shadow-sm',
-        isHidden && !isNavOpen && '-translate-y-full',
+        // `focus-within` brings the bar back when a keyboard user tabs into
+        // it. Without it, focus can land on a control that has been
+        // translated out of the viewport, and because the header is fixed the
+        // browser cannot scroll it into view.
+        isHidden &&
+          !isNavOpen &&
+          '-translate-y-full focus-within:translate-y-0',
       )}
     >
       <div className="container-page flex h-full items-center justify-between gap-4">
@@ -58,17 +66,32 @@ export function Header() {
             <SheetContent side="right" className="w-[85%] max-w-sm gap-0 p-0">
               <SheetHeader className="p-6 pb-4">
                 <SheetTitle className="sr-only">Navigation</SheetTitle>
-                <Logo className="w-fit" />
+                {/*
+                  The logo navigates home like any other link in the sheet, so
+                  it has to close it too — otherwise the overlay stays over the
+                  page the visitor just landed on.
+                */}
+                <Logo
+                  className="w-fit"
+                  onNavigate={() => {
+                    setNavOpen(false)
+                  }}
+                />
               </SheetHeader>
               <Separator />
-              <nav className="p-4" aria-label="Main">
+              {/*
+                A plain div: `Nav` renders Radix's NavigationMenu root, which
+                is already a labelled <nav>. Wrapping it in another one would
+                nest two identically named navigation landmarks.
+              */}
+              <div className="p-4">
                 <Nav
                   orientation="vertical"
                   onNavigate={() => {
                     setNavOpen(false)
                   }}
                 />
-              </nav>
+              </div>
               <Separator className="mt-auto" />
               <div className="flex items-center gap-2 p-6">
                 {footerLinks.map((link) => (

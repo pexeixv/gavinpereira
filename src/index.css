@@ -136,7 +136,13 @@
   --destructive: oklch(57.7% 0.245 27.325); /* red-600 */
 
   --border: oklch(92.2% 0 none); /* neutral-200 */
-  --input: oklch(92.2% 0 none);
+  /*
+    Form controls are user-interface components, so their boundary needs 3:1
+    against the page (SC 1.4.11). neutral-200 — the shadcn default — manages
+    1.3:1; neutral-500 clears it at 4.7:1. `--border` stays light because it
+    only ever separates content.
+  */
+  --input: oklch(55.6% 0 none); /* neutral-500 */
   /* Focus indicators need 3:1 against their surroundings; brand-500 does not. */
   --ring: var(--color-brand-600);
 
@@ -182,7 +188,7 @@
   --destructive: oklch(70.4% 0.191 22.216); /* red-400 */
 
   --border: oklch(100% 0 none / 12%);
-  --input: oklch(100% 0 none / 16%);
+  --input: oklch(100% 0 none / 40%); /* see the note in :root */
   --ring: var(--color-brand-400);
 
   --surface: oklch(20.5% 0 none);
@@ -300,7 +306,13 @@
   }
 
   /* Focus ring used on anything interactive that is not a shadcn primitive. */
+  /*
+    The ring is fully opaque: WCAG 2.2 SC 1.4.11 wants 3:1 for a focus
+    indicator, and a translucent brand ring composited over the page does not
+    reach it. This is the only focus affordance on the elements that use it —
+    they also clear the UA outline — so it has to carry the contrast alone.
+  */
   .focus-ring {
-    @apply rounded-md outline-none focus-visible:ring-2 focus-visible:ring-ring/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+    @apply rounded-md outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 }

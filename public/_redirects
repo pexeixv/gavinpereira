@@ -51,5 +51,9 @@
 /kucoin https://www.kucoin.com/land/register/r/rJ4EMY3
 /decentr https://referral.decentr.net/?referralCode=hm4_x2Yt
 
+# The old /links page held only placeholder rows; its social profiles live on
+# /contact, so the URL is kept alive rather than dropped.
+/links /contact
+
 # Client-routed app: every path that is not a real file serves the shell.
 /*  /index.html  200

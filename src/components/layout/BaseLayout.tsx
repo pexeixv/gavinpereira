@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom'
 
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
-import { ScrollToTop } from '@/components/layout/ScrollToTop'
+import { RouteChangeHandler } from '@/components/layout/RouteChangeHandler'
 import { SeasonOverlay } from '@/components/layout/SeasonOverlay'
 import { Lightbox } from '@/components/sections/shared/Lightbox'
 
@@ -15,7 +15,7 @@ import { Lightbox } from '@/components/sections/shared/Lightbox'
 export function BaseLayout() {
   return (
     <div className="flex min-h-dvh flex-col">
-      <ScrollToTop />
+      <RouteChangeHandler />
 
       <a
         href="#main"
@@ -29,7 +29,7 @@ export function BaseLayout() {
       {/* Spacer for the fixed header. */}
       <div aria-hidden="true" className="h-[4.375rem] shrink-0" />
 
-      <main id="main" className="flex-1">
+      <main id="main" tabIndex={-1} className="flex-1 outline-none">
         <Outlet />
       </main>
 

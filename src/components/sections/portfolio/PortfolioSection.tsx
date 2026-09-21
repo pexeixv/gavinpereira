@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import { PortfolioItem } from '@/components/sections/portfolio/PortfolioItem'
 import { ProjectCardSkeleton } from '@/components/sections/shared/ProjectCard'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
@@ -8,19 +6,24 @@ import { Button } from '@/components/ui/button'
 import { useProjectsByCategory } from '@/lib/queries/use-projects'
 import type { ProjectCategory } from '@/types'
 
-/** How many entries appear before the first "More", and per press after it. */
-const PAGE_SIZE = 3
+const SKELETON_COUNT = 3
 
 interface PortfolioSectionProps {
   category: ProjectCategory
+  /** How many entries to show. Owned by the parent so it survives collapsing. */
+  visible: number
+  onShowMore: () => void
 }
 
 /**
- * The projects for one category, revealed three at a time — the behaviour of
+ * The projects for one category, revealed a few at a time — the behaviour of
  * the old "MORE" button, now with a live count and a skeleton while loading.
  */
-export function PortfolioSection({ category }: PortfolioSectionProps) {
-  const [visible, setVisible] = useState(PAGE_SIZE)
+export function PortfolioSection({
+  category,
+  visible,
+  onShowMore,
+}: PortfolioSectionProps) {
   const {
     data: projects = [],
     isPending,
@@ -50,7 +53,7 @@ export function PortfolioSection({ category }: PortfolioSectionProps) {
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {isPending &&
-          Array.from({ length: PAGE_SIZE }, (_, index) => (
+          Array.from({ length: SKELETON_COUNT }, (_, index) => (
             <ProjectCardSkeleton key={index} />
           ))}
 
@@ -61,13 +64,7 @@ export function PortfolioSection({ category }: PortfolioSectionProps) {
 
       {remaining > 0 && (
         <div className="flex justify-center">
-          <Button
-            variant="brandOutline"
-            size="xl"
-            onClick={() => {
-              setVisible((current) => current + PAGE_SIZE)
-            }}
-          >
+          <Button variant="brandOutline" size="xl" onClick={onShowMore}>
             More
             <Badge variant="secondary" className="ml-1">
               {remaining}

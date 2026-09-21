@@ -65,14 +65,32 @@ axiosInstance.interceptors.response.use(
   },
 )
 
+/** Longest response body that could plausibly be a human-readable message. */
+const MAX_MESSAGE_LENGTH = 200
+
+/**
+ * Only accept a bare string body when it looks like a message rather than a
+ * document: a proxy answering with an HTML error page would otherwise put the
+ * whole page into a toast.
+ */
+function messageFromString(value: string): string | undefined {
+  const trimmed = value.trim()
+  if (trimmed === '' || trimmed.length > MAX_MESSAGE_LENGTH) return undefined
+  if (/^\s*[<{[]/.test(trimmed)) return undefined
+  return trimmed
+}
+
 /** Best-effort message extraction from an arbitrary error payload. */
 function messageFromPayload(payload: unknown): string | undefined {
-  if (typeof payload === 'string' && payload.trim() !== '') return payload
+  if (typeof payload === 'string') return messageFromString(payload)
   if (payload && typeof payload === 'object') {
     const record = payload as Record<string, unknown>
     for (const key of ['message', 'error', 'detail'] as const) {
       const value = record[key]
-      if (typeof value === 'string' && value.trim() !== '') return value
+      if (typeof value === 'string') {
+        const message = messageFromString(value)
+        if (message) return message
+      }
     }
   }
   return undefined

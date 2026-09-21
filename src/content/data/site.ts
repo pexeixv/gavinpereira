@@ -56,19 +56,20 @@ export const socialLinks: SocialLink[] = [
   },
 ]
 
-/** Quick contact shortcuts shown in the footer. */
-export const footerLinks: SocialLink[] = [
-  {
-    platform: 'whatsapp',
-    label: 'WhatsApp',
-    href: 'https://wa.me/918888253992',
-  },
-  {
-    platform: 'email',
-    label: 'Email',
-    href: `mailto:${site.publicEmail}`,
-  },
-]
+/**
+ * Quick contact shortcuts shown in the footer.
+ *
+ * Built from {@link getDirectContact} rather than written out: the footer is on
+ * every page, so a literal `wa.me/<number>` here would publish in plain markup
+ * the very number the encoding above exists to keep out of it.
+ */
+export function getFooterLinks(): SocialLink[] {
+  const { whatsappUrl } = getDirectContact()
+  return [
+    { platform: 'whatsapp', label: 'WhatsApp', href: whatsappUrl },
+    { platform: 'email', label: 'Email', href: `mailto:${site.publicEmail}` },
+  ]
+}
 
 /** Primary navigation. */
 export const navLinks = [

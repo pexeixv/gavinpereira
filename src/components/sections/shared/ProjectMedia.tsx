@@ -1,5 +1,6 @@
 import { ExpandIcon } from 'lucide-react'
 
+import { usePrefersReducedMotion } from '@/hooks/use-prefers-reduced-motion'
 import { imagekitSrcSet, imagekitUrl } from '@/lib/imagekit'
 import { cn } from '@/lib/utils'
 import type { Project } from '@/types'
@@ -23,6 +24,9 @@ export function ProjectMedia({
   className,
   eager = false,
 }: ProjectMediaProps) {
+  // Called before the early return — hooks cannot sit behind a conditional.
+  const prefersReducedMotion = usePrefersReducedMotion()
+
   const hasMedia = Boolean(project.image ?? project.video)
   if (!hasMedia) return null
 
@@ -47,9 +51,13 @@ export function ProjectMedia({
       {project.video && (
         <video
           src={imagekitUrl(project.video, { width: 450 })}
-          autoPlay
+          // Motion pieces loop by design, but an endless auto-started loop is
+          // exactly what "reduce motion" asks the site not to do. Those
+          // visitors get a still first frame instead and can still open the
+          // piece in the lightbox, which has full controls.
+          autoPlay={!prefersReducedMotion}
           muted
-          loop
+          loop={!prefersReducedMotion}
           playsInline
           preload="metadata"
           aria-label={`${project.name} — ${project.type}`}

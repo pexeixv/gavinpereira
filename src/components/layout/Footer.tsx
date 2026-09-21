@@ -1,9 +1,10 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Logo } from '@/components/layout/Logo'
 import { SocialIconLink } from '@/components/sections/shared/SocialIconLink'
 import { Separator } from '@/components/ui/separator'
-import { footerLinks, site } from '@/content/data/site'
+import { getFooterLinks, site } from '@/content/data/site'
 
 const legalLinks = [
   { label: 'Privacy', to: '/privacy-policy' },
@@ -12,6 +13,8 @@ const legalLinks = [
 ]
 
 export function Footer() {
+  const footerLinks = useMemo(() => getFooterLinks(), [])
+
   return (
     <footer className="border-t bg-background">
       <div className="container-page flex flex-col items-center gap-6 py-8 md:flex-row md:justify-between">

@@ -12,10 +12,12 @@ message you type are transmitted to the mail service that delivers it. That
 information is used to reply to you and nothing else. It is not sold, rented or
 shared with advertisers.
 
-**Spam protection.** The contact form uses Google reCAPTCHA to tell people from
-bots. Google receives the information needed to run that check, subject to
+**Spam protection.** When spam protection is switched on, the contact form uses
+Google reCAPTCHA to tell people from bots, and Google receives the information
+needed to run that check, subject to
 [Google's Privacy Policy](https://policies.google.com/privacy) and
-[Terms of Service](https://policies.google.com/terms).
+[Terms of Service](https://policies.google.com/terms). You can see whether it is
+active: the reCAPTCHA checkbox appears above the send button when it is.
 
 **Hosting and delivery.** Like every website, the host and the CDN that serves
 images record standard request data such as IP address, browser user agent and
@@ -23,9 +25,11 @@ the page requested. This is ordinary server logging, not profiling.
 
 ## What is stored in your browser
 
-The site stores a single preference in `localStorage`: whether you chose the
-light or the dark theme. It contains no identifier, it never leaves your
-device, and clearing site data removes it.
+The site stores one preference in `localStorage`: whether you chose the light or
+the dark theme. It is written under two keys — `gp-theme` and `mode`, the second
+kept for compatibility with the previous version of this site — and both hold
+nothing but that choice. There is no identifier, nothing leaves your device, and
+clearing site data removes both.
 
 There are no advertising cookies and no third-party analytics scripts.
 

@@ -220,6 +220,11 @@
       "source": "/decentr",
       "destination": "https://referral.decentr.net/?referralCode=hm4_x2Yt",
       "permanent": true
+    },
+    {
+      "source": "/links",
+      "destination": "/contact",
+      "permanent": true
     }
   ],
   "rewrites": [

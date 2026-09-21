@@ -27,7 +27,13 @@ export function Lightbox() {
         if (!open) closeLightbox()
       }}
     >
-      <DialogContent className="max-w-[min(1000px,92vw)] border-none bg-transparent p-0 shadow-none sm:max-w-[min(1000px,92vw)]">
+      {/*
+        The surface is transparent so the media sits directly on the backdrop.
+        That leaves the inherited close button floating over the artwork, so it
+        gets a solid pill of its own — a ghost button over a dark screenshot is
+        invisible, and it is the only visible way out of the dialog.
+      */}
+      <DialogContent className="max-w-[min(1000px,92vw)] border-none bg-transparent p-0 shadow-none **:data-[slot=button]:bg-background **:data-[slot=button]:text-foreground **:data-[slot=button]:shadow-md **:data-[slot=button]:hover:bg-background/90 *:data-[slot=dialog-close]:top-3 *:data-[slot=dialog-close]:right-3 sm:max-w-[min(1000px,92vw)]">
         <DialogHeader className="sr-only">
           <DialogTitle>{project?.name ?? 'Project preview'}</DialogTitle>
           <DialogDescription>

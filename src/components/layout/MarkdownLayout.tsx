@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom'
 
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
-import { ScrollToTop } from '@/components/layout/ScrollToTop'
+import { RouteChangeHandler } from '@/components/layout/RouteChangeHandler'
 import { SeasonOverlay } from '@/components/layout/SeasonOverlay'
 import { Button } from '@/components/ui/button'
 
@@ -16,7 +16,7 @@ import { Button } from '@/components/ui/button'
 export function MarkdownLayout() {
   return (
     <div className="flex min-h-dvh flex-col">
-      <ScrollToTop />
+      <RouteChangeHandler />
 
       <a
         href="#main"
@@ -28,7 +28,7 @@ export function MarkdownLayout() {
       <Header />
       <div aria-hidden="true" className="h-[4.375rem] shrink-0" />
 
-      <main id="main" className="flex-1 bg-surface">
+      <main id="main" tabIndex={-1} className="flex-1 bg-surface outline-none">
         <div className="mx-auto w-[90%] max-w-[70ch] py-12 md:py-16">
           <Button
             asChild
