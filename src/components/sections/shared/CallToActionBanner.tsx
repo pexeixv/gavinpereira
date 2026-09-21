@@ -39,7 +39,7 @@ export function CallToActionBanner({
               {title}
             </h2>
             {description && (
-              <p className="text-pretty text-primary-foreground/80">
+              <p className="text-pretty text-primary-foreground/90">
                 {description}
               </p>
             )}

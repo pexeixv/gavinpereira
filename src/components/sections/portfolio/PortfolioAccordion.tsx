@@ -22,7 +22,8 @@ export function PortfolioAccordion() {
     <Accordion type="multiple" defaultValue={DEFAULT_OPEN}>
       {projectCategories.map((category) => (
         <AccordionItem key={category.id} value={category.id}>
-          <AccordionTrigger>
+          {/* The page heading is the h1, so these sit at h2. */}
+          <AccordionTrigger headingLevel={2}>
             <span className="flex items-center gap-3">
               {category.name}
               <Badge variant="secondary">{countFor(category.id)}</Badge>

@@ -36,10 +36,20 @@ function AccordionItem({
 function AccordionTrigger({
   className,
   children,
+  headingLevel = 3,
   ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
+}: React.ComponentProps<typeof AccordionPrimitive.Trigger> & {
+  /**
+   * The heading element the trigger sits in. Radix defaults to `h3`; this lets
+   * a page place the accordion at the right depth in its heading outline.
+   */
+  headingLevel?: 2 | 3 | 4 | 5
+}) {
+  const Heading = `h${headingLevel}` as "h2" | "h3" | "h4" | "h5"
+
   return (
-    <AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Header asChild>
+      <Heading className="flex">
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
@@ -57,7 +67,8 @@ function AccordionTrigger({
           data-slot="accordion-trigger-icon"
           className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline"
         />
-      </AccordionPrimitive.Trigger>
+        </AccordionPrimitive.Trigger>
+      </Heading>
     </AccordionPrimitive.Header>
   )
 }

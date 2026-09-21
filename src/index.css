@@ -120,7 +120,12 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(20.5% 0 none);
 
-  --primary: var(--color-brand-600);
+  /*
+    brand-700 rather than brand-600: the 600 step only reaches 3.7:1 against
+    white, so links and other small brand-coloured text would fall below
+    WCAG AA. 700 clears it at 5.5:1 and still reads as the same accent.
+  */
+  --primary: var(--color-brand-700);
   --primary-foreground: oklch(100% 0 none);
   --secondary: oklch(97% 0 none); /* neutral-100 */
   --secondary-foreground: oklch(20.5% 0 none);
@@ -132,7 +137,8 @@
 
   --border: oklch(92.2% 0 none); /* neutral-200 */
   --input: oklch(92.2% 0 none);
-  --ring: var(--color-brand-500);
+  /* Focus indicators need 3:1 against their surroundings; brand-500 does not. */
+  --ring: var(--color-brand-600);
 
   --surface: var(--color-brand-50);
   --surface-foreground: var(--color-brand-950);
@@ -149,12 +155,12 @@
 
   --sidebar: oklch(98.5% 0 none);
   --sidebar-foreground: oklch(20.5% 0 none);
-  --sidebar-primary: var(--color-brand-600);
+  --sidebar-primary: var(--color-brand-700);
   --sidebar-primary-foreground: oklch(100% 0 none);
   --sidebar-accent: var(--color-brand-50);
   --sidebar-accent-foreground: var(--color-brand-800);
   --sidebar-border: oklch(92.2% 0 none);
-  --sidebar-ring: var(--color-brand-500);
+  --sidebar-ring: var(--color-brand-600);
 }
 
 .dark {

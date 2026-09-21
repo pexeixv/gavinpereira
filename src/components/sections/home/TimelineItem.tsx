@@ -40,7 +40,6 @@ export function TimelineItem({ entry }: TimelineItemProps) {
               className="max-h-10 w-auto max-w-45 object-contain grayscale transition-all duration-300 group-hover/logo:grayscale-0"
             />
           </span>
-          <span className="sr-only">{entry.organisation}</span>
         </a>
       </CardContent>
     </Card>
