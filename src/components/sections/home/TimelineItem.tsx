@@ -23,15 +23,23 @@ export function TimelineItem({ entry }: TimelineItemProps) {
           target="_blank"
           rel="noreferrer noopener"
           title={entry.organisation}
-          className="focus-ring mt-auto inline-block"
+          className="focus-ring group/logo mt-auto inline-block"
         >
-          <img
-            src={entry.logo}
-            alt={entry.organisation}
-            loading="lazy"
-            decoding="async"
-            className="max-h-12 w-auto max-w-[200px] object-contain grayscale transition-all duration-300 hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:brightness-100 dark:hover:invert-0"
-          />
+          {/*
+            The logos are dark-ink artwork on transparent backgrounds. Rather
+            than inverting them in the dark theme — which flattens the detail
+            in the crest-style marks — they sit on a light plate that keeps
+            every one legible.
+          */}
+          <span className="inline-flex items-center justify-center rounded-lg p-2 transition-colors dark:bg-white">
+            <img
+              src={entry.logo}
+              alt={entry.organisation}
+              loading="lazy"
+              decoding="async"
+              className="max-h-10 w-auto max-w-45 object-contain grayscale transition-all duration-300 group-hover/logo:grayscale-0"
+            />
+          </span>
           <span className="sr-only">{entry.organisation}</span>
         </a>
       </CardContent>

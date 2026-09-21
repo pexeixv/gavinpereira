@@ -73,14 +73,14 @@ function AccordionContent({
       className="overflow-hidden text-sm data-open:animate-accordion-down data-closed:animate-accordion-up"
       {...props}
     >
-      <div
-        className={cn(
-          "h-(--radix-accordion-content-height) border-t px-5 pt-6 pb-6",
-          className
-        )}
-      >
-        {children}
-      </div>
+      {/*
+        The generated component pinned this wrapper to
+        `h-(--radix-accordion-content-height)`, which is measured once when the
+        panel opens. Panels here contain lazily loaded media that grows after
+        that measurement, so the height is left to the content and only the
+        open/close animation uses the variable.
+      */}
+      <div className={cn("border-t px-5 pt-6 pb-6", className)}>{children}</div>
     </AccordionPrimitive.Content>
   )
 }

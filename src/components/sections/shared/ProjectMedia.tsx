@@ -40,7 +40,7 @@ export function ProjectMedia({
           alt={`${project.name} — ${project.type}`}
           loading={eager ? 'eager' : 'lazy'}
           decoding="async"
-          className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          className="size-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
       )}
 
@@ -53,7 +53,7 @@ export function ProjectMedia({
           playsInline
           preload="metadata"
           aria-label={`${project.name} — ${project.type}`}
-          className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          className="size-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         >
           {/* Silent showreel loop — nothing to caption. */}
           <track kind="captions" />
@@ -76,7 +76,10 @@ export function ProjectMedia({
   )
 
   const wrapperClass = cn(
-    'group relative block w-full overflow-hidden rounded-xl bg-neutral-900 ring-1 ring-foreground/10',
+    // A fixed frame keeps every card in a row the same height; the media is
+    // contained rather than cropped so design work is never cut off, letter-
+    // boxed against the dark plate the previous site also used.
+    'group relative block aspect-[1380/1080] w-full overflow-hidden rounded-xl bg-neutral-900 ring-1 ring-foreground/10',
     className,
   )
 

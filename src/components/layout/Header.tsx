@@ -30,7 +30,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-50 h-[70px] transition-transform duration-300',
+        'fixed inset-x-0 top-0 z-50 h-[4.375rem] transition-transform duration-300',
         'bg-background/85 supports-backdrop-filter:backdrop-blur-md',
         isScrolled && 'border-b shadow-sm',
         isHidden && !isNavOpen && '-translate-y-full',

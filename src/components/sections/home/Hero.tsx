@@ -43,15 +43,15 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative flex items-end justify-center">
-          <HeroShapes className="absolute inset-0 -z-10 h-full w-full translate-y-6 scale-110 text-accent opacity-90 dark:opacity-60" />
+        <div className="relative isolate flex items-end justify-center">
+          <HeroShapes className="absolute inset-0 z-0 size-full translate-y-6 scale-110 text-brand-100 dark:text-brand-950" />
           <img
             src="/img/gavin.png"
             alt={`${site.name}, ${site.role}`}
             width={560}
             height={700}
             fetchPriority="high"
-            className="relative z-10 max-h-[26rem] w-auto object-contain lg:max-h-[32rem]"
+            className="relative z-10 max-h-104 w-auto object-contain lg:max-h-128"
           />
         </div>
       </div>
@@ -62,7 +62,7 @@ export function Hero() {
           type="button"
           onClick={scrollToNext}
           aria-label="Scroll to the next section"
-          className="group pointer-events-auto relative grid h-[66px] w-[124px] cursor-pointer place-items-end rounded-t-full text-surface focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+          className="group pointer-events-auto relative grid h-16.5 w-31 cursor-pointer items-end justify-center rounded-t-full text-surface focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
         >
           <ScrollPlinth className="absolute inset-0 h-full w-full" />
           <ChevronDownIcon

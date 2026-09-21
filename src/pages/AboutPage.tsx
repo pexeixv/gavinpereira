@@ -16,6 +16,7 @@ export default function AboutPage() {
       <AboutIntro />
       <TechKnowledge />
       <CallToActionBanner
+        tone="plain"
         title="Can’t find what you’re looking for?"
         description="I always look forward to learning new technologies."
       />

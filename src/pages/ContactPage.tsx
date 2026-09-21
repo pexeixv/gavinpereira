@@ -27,10 +27,14 @@ export default function ContactPage() {
       </Section>
 
       <Section aria-labelledby="contact-other-title">
-        <h2 id="contact-other-title" className="sr-only">
-          Other ways to reach me
-        </h2>
-        <ContactInfo />
+        <SectionHeading
+          id="contact-other-title"
+          title="Or reach me directly"
+          description="WhatsApp and email get the quickest reply."
+        />
+        <div className="mt-10">
+          <ContactInfo />
+        </div>
       </Section>
     </>
   )

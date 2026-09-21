@@ -27,7 +27,7 @@ export function BaseLayout() {
       <Header />
 
       {/* Spacer for the fixed header. */}
-      <div aria-hidden="true" className="h-[70px] shrink-0" />
+      <div aria-hidden="true" className="h-[4.375rem] shrink-0" />
 
       <main id="main" className="flex-1">
         <Outlet />
