@@ -1,7 +1,34 @@
+# Dependencies
 node_modules
+
+# Build output
+dist
+dist-ssr
+.vite
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
 .env
-.netlify
-.vscode
-_site
-documentation
+.env.local
+.env.*.local
+!.env.example
+
+# Editors & OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
 desktop.ini
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.local
