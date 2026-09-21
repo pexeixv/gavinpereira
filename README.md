@@ -166,12 +166,18 @@ Two layouts wrap the route tree, wired up in
 
 Pages are lazily loaded, so each route ships its own chunk.
 
-### Deployment note
+### Deployment
 
-This is a client-routed single-page app, so the host must rewrite unknown paths
-to `index.html`. The rules in `public/vercel.json` and `public/_redirects` carry
-the site's short links (`/wa`, `/resume`, `/github`, …) across from the previous
-setup; add an SPA fallback alongside them for whichever host you deploy to.
+This is a client-routed app, so any path without a file extension has to serve
+`index.html` instead of 404-ing. `public/vercel.json` and `public/_redirects`
+both do that, and both still carry the site's short links (`/wa`, `/resume`,
+`/github`, …) as ordinary 301s ahead of the fallback. On any other host, add the
+same SPA fallback.
+
+The previous Eleventy site ended its redirect list with a catch-all that sent
+unmatched paths to `/home`. That was harmless when every page was a real file;
+it is not now, because `/about` no longer is — so the catch-all was replaced
+with the SPA fallback. Every individual short link is unchanged.
 
 ---
 
