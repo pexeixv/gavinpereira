@@ -130,12 +130,14 @@ src/
   components/
     icons/                  Brand glyphs and decorative artwork
     layout/                 BaseLayout, MarkdownLayout, Header, Nav, Footer,
-                            Logo, ThemeToggle, Snowfall, error and loading states
+                            Logo, ThemeToggle, Snowfall, RouteChangeHandler,
+                            error and loading states
     sections/               Page sections, grouped by the page they belong to
-      home/ about/ portfolio/ contact/ shared/
+      home/ about/ portfolio/ contact/ pay/ shared/
     ui/                     shadcn primitives (see CLAUDE.md before editing)
   content/
-    data/                   Projects, testimonials, timeline, tech stack, site copy
+    data/                   Projects, testimonials, timeline, tech stack,
+                            payment details, site copy
     legal/                  Markdown documents plus their registry
   hooks/                    useTheme, useSeason, useHideOnScroll, usePageMeta, …
   lib/
@@ -160,7 +162,8 @@ Two layouts wrap the route tree, wired up in
 [`src/app/routes.tsx`](src/app/routes.tsx):
 
 - **`BaseLayout`** — header, footer, seasonal ornaments and the shared project
-  lightbox. Used by `/`, `/about`, `/portfolio`, `/contact` and the 404 route.
+  lightbox. Used by `/`, `/about`, `/portfolio`, `/contact`, `/pay` and the 404
+  route.
 - **`MarkdownLayout`** — the same chrome with a constrained reading column and
   a back-to-home link. Used by `/privacy-policy`, `/terms` and `/uses`.
 
